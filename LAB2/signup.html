@@ -10,10 +10,11 @@
         <h4>회원가입</h4>
         <form name="username" action="useraction" method="post">
          이름 : <input type='text' name='username' autofocus /><br>
-         학번 : <input type='text' name='userId' placeholder='학번을 입력하세요.' />
+         학년 : <input type='text' name='userId' placeholder='학년을 입력하세요.' /><br>
+         전화번호 : <input type='text' name='userphonenum' required/><br>
+         생일 : <input type='text' name="userbirthday" pattern="[0-9]{6}" title="6자리생년월일을 입력하세요"><br>
        
-       
-            <input type="submit">
+        <input type="submit">
         </form>  
         </form>    
         <h7>생일</h7>        
