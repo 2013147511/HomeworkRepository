@@ -2,7 +2,7 @@ p {
     color: red;
   }
 
-  h1 {
-    font-size: 60px;
-    text-align: center;
+h1 {
+    color: rgb(253, 0, 127);
+    border-bottom: purple 10px dotted;
   }
