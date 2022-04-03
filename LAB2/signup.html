@@ -8,12 +8,12 @@
      
         <h3>로그인</h3>
         <h4>회원가입</h4>
-        <form name="username" action="useraction" method="post">
+        <form name="user" action="useraction" method="post">
          이름 : <input type='text' name='username' autofocus /><br>
          학년 : <input type='text' name='userId' placeholder='학년을 입력하세요.' /><br>
          전화번호 : <input type='text' name='userphonenum' required/><br>
-         생일 : <input type='text' name="userbirthday" pattern="[0-9]{6}" title="6자리생년월일을 입력하세요"><br>
-       
+         생일 : <input type='text' name="userbirthday" pattern="[0-9]{6}" ><br>
+         ID :   <input type='number' name='userid' step='3'/> 
         <input type="submit">
         </form>  
         </form>    
