@@ -1,13 +1,30 @@
-p {
-    color: red;
-  }
+.title1 {
+  background-color: rgb(55, 95, 95);
+  color: white;
+  text-align: center;
+  font-family:sans-serif;
+  font-size:25px;
 
-h1{
-    color: rgb(253, 0, 127);
-    border-bottom: purple 10px dotted;
+.login {
+  background-color: rgb(136, 111, 57);
+  
+
 }
 
-.exampleone {
-  background-color: teal;
-  color: white;
+button {
+ 
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-block;
+  width: auto;
+
+  border: none;
+  border-radius: 4px;
 }
