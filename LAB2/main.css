@@ -2,7 +2,12 @@ p {
     color: red;
   }
 
-h1 {
+h1{
     color: rgb(253, 0, 127);
     border-bottom: purple 10px dotted;
-  }
+}
+
+.exampleone {
+  background-color: teal;
+  color: white;
+}
