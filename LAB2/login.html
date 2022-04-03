@@ -7,21 +7,12 @@
     <body>
         
         <h3>로그인</h3>
-       
-
-
-
-        <h4>회원가입</h4>
         
         <br><br>
 
-        <h5>개인정보(필수)</h5>
-        <form name="user" action="useraction" method="post">
-         이름 : <input type='text' name='username' autofocus /><br>
-         학년 : <input type='text' name='userId' placeholder='학년을 입력하세요.'step='1' /><br>
-         전화번호 : <input type='text' name='userphonenum' required/><br>
-         생일 : <input type='date' name='userbirth'  placeholder='년도를 입력하세요.'/> 
-           
+    
+        <form name="user" action="useraction" method="get">
+    
          ID :   <input type='text' name="userid" pattern="[a-z]{10}" ><br>
          PASSWORD :   <input type='text' name="userpassword" pattern="[a-z]{10}" ><br>
         <input type="submit">
