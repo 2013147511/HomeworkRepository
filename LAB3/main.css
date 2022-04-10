@@ -70,4 +70,13 @@ button {
   transform: rotate(360deg);
 }
 
+#myimg2{
+  margin: 50px;
+  transition: transform 2s;
+}
+
+#myimg2:hover{
+  transform:scale(10,10);
+}
+
 
