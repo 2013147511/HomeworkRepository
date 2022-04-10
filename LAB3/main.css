@@ -1,4 +1,10 @@
 
+.all{
+  width: 1020px;
+  text-align: center;
+  border : 3px solid navy;
+  margin : auto;
+}
 
 .title1 {
   width: 1020px;
@@ -15,8 +21,8 @@
 
 
 #title1_animation {
-  text-align: center;
   font-size: 40px;
+  text-align: center;
   animation-duration: 2s;
   animation-name: sliding_title;
   margin: 0px 0px 0px 0px;
@@ -37,10 +43,26 @@ button {
 
 }
 
-.all{
-  width: 1020px;
-  text-align: center;
-  border : 3px solid navy;
-  margin : auto;
+.shop{
+  border: 2px solid red;
+  margin: 30px 30px 30px 30px;
+  padding: 20px;
 }
+
+.imgbox{
+  border: 2px solid purple;
+    margin: 10px 10px 10px 10px;
+    padding: 180px 180px 180px 180px;
+
+}
+#myimgbox1{
+  margin: 100px;
+  transition: transform 2s;
+}
+
+
+#myimgbox1:hover{
+
+}
+
 
