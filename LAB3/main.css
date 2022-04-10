@@ -1,4 +1,7 @@
+
+
 .title1 {
+  width: 1020px;
   background-color: rgb(55, 95, 95);
   color: white;
   text-align: center;
@@ -7,11 +10,12 @@
 }
 .login1 {
   background-color: rgb(136, 111, 57);
-  
+  width: 1020px;
 
 }
 
 button {
+  width: 1020px;
   background-color: rgb(130, 196, 44);
   border: none;
   font-size: 11px;
