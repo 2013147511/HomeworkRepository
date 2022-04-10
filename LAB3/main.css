@@ -55,14 +55,19 @@ button {
     padding: 100px 100px 100px 100px;
 
 }
-#myimgbox1{
+.myimg{
+  width:100px;
+  height:100px;
+}
+
+#myimg1{
   margin: 100px;
   transition: transform 2s;
 }
 
 
-#myimgbox1:hover{
-
+#myimg1:hover{
+  transform: rotate(360deg);
 }
 
 
