@@ -1,0 +1,27 @@
+.title1 {
+  background-color: rgb(55, 95, 95);
+  color: white;
+  text-align: center;
+  font-family:sans-serif;
+  font-size:25px;
+}
+.login1 {
+  background-color: rgb(136, 111, 57);
+  
+
+}
+
+button {
+ 
+  margin: 0;
+  padding: 0.6rem 2rem;
+  background-color: blue;
+  
+  text-align: center;
+  
+  width: 20px;
+  height: 15px;
+
+  border: 10px;
+
+}
