@@ -14,14 +14,8 @@
 
 }
 @keyframes sliding_text {
-  from {
-      margin-left: +1020px;
-      width: 140%;
-    }
-  
-    to {
-      width: 100%;
-    }
+  from { width: 140%; margin-left: +1020px;} 
+  to {width: 100%;}
 }
 
 .navi{
