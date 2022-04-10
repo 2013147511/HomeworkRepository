@@ -13,10 +13,10 @@
   width: 1020px;
 
 }
-@keyframes slidingtext {
+@keyframes sliding_text {
   from {
       margin-left: +1020px;
-      width: 130%;
+      width: 140%;
     }
   
     to {
@@ -33,7 +33,7 @@
   text-align: center;
   font-size: 30px;
   animation-duration: 2s;
-  animation-name: slidingtext;
+  animation-name: sliding_text;
   margin: 0px 0px 0px 0px;
 }
 button {
