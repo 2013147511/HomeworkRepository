@@ -13,7 +13,24 @@
   width: 1020px;
 
 }
+@keyframes slidingtext {
+  from {
+      margin-left: +1020px;
+      width: 110%;
+    }
+  
+    to {
+      width: 90%;
+    }
+}
 
+#title1_animation {
+  text-align: center;
+  font-size: 30px;
+  animation-duration: 4s;
+  animation-name: slidingtext;
+  margin: 0px 0px 0px 0px;
+}
 button {
   width: 80px;
   background-color: rgb(130, 196, 44);
@@ -30,3 +47,4 @@ button {
   text-align: center;
   margin : auto;
 }
+
