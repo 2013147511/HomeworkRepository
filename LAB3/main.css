@@ -24,10 +24,15 @@
     }
 }
 
+.navi{
+  border: 2px solid red;
+  margin: 30px 30px 30px 30px;
+  padding: 20px;
+}
 #title1_animation {
   text-align: center;
   font-size: 30px;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-name: slidingtext;
   margin: 0px 0px 0px 0px;
 }
