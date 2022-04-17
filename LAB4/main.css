@@ -90,6 +90,9 @@ button {
 #myimg2:hover{
   transform:scale(8.95,2.28);
 }
+.mytext{
+  font-size: 10px;
+}
 }
 
 
