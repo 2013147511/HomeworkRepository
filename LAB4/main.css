@@ -33,6 +33,8 @@
   border: 2px solid red;
   margin: 30px 30px 30px 30px;
   padding: 20px;
+  width: 1020px;
+  text-align: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
