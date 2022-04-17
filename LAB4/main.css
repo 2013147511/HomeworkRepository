@@ -44,8 +44,13 @@ button {
   border: 2px solid red;
   margin: 30px 30px 30px 30px;
   padding: 20px;
+  
 }
-
+.shop{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .imgbox{
   border: 2px solid purple;
   margin: 10px 10px 10px 10px;
@@ -125,17 +130,27 @@ button {
   
   }
   
- 
+  .mainindex{
+    border: 2px solid red;
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
+    
+  }
+
+  .shop{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   
   .imgbox{
     border: 2px solid purple;
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
     width : 200px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
   }
+
+
   .myimg{
     width:100px;
     height:100px;
@@ -209,6 +224,13 @@ button {
     border: 2px solid red;
     margin: 30px 30px 30px 30px;
     padding: 20px;
+    
+  }
+  .shop{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
   }
   
   .imgbox{
@@ -216,10 +238,6 @@ button {
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
     width : 200px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  
   }
   .myimg{
     width:100px;
