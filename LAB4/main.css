@@ -59,6 +59,7 @@ button {
   color: white;
   text-align: center;
   font-family:sans-serif;
+  width:1020px;
 }
 .imgbox{
   border: 2px solid purple;
