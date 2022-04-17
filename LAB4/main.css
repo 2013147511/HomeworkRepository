@@ -31,7 +31,7 @@
   width: 1020px;
 }
 button {
-  width: 80px;
+  width: 120px;
   background-color: rgb(130, 196, 44);
   border: none;
   margin: 30px 30px 30px 30px;
@@ -124,7 +124,7 @@ button {
     
   }
   button {
-    width: 80px;
+    width: 120px;
     background-color: rgb(130, 196, 44);
     margin: 30px 30px 30px 30px;
     padding: 20px;
@@ -217,7 +217,7 @@ button {
     justify-content: center;
   }
   button {
-    width: 80px;
+    width: 120px;
     background-color: rgb(130, 196, 44);
     margin: 30px 30px 30px 30px;
     padding: 20px;
