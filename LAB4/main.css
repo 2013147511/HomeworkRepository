@@ -32,6 +32,9 @@
   border: 2px solid red;
   margin: 30px 30px 30px 30px;
   padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 button {
   width: 80px;
@@ -43,7 +46,7 @@ button {
 
 }
 
-.shop{
+.mainindex{
   border: 2px solid red;
   margin: 30px 30px 30px 30px;
   padding: 20px;
