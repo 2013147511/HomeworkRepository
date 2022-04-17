@@ -19,7 +19,7 @@
   text-align: center;
   animation-duration: 2s;
   animation-name: sliding_title;
-  margin: 0px 0px 0px 0px;
+  margin: 5px 5px 5px 5px;
 }
 
 .navi{
@@ -44,7 +44,7 @@ button {
 
 .mainindex{
   border: 2px solid red;
-  margin: 30px 30px 30px 30px;
+  margin: 5px 5px 5px 5px;
   padding: 20px;
   width : 1020px;
 }
