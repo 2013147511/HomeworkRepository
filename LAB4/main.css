@@ -104,8 +104,9 @@ button {
   
   .navi{
     border: 2px solid red;
-    margin: 5px 5px 5px 5px;
-    padding: 3px 3px 3px 3px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     
   }
   button {
@@ -178,8 +179,6 @@ button {
   
   .navi{
     border: 2px solid red;
-    margin: 30px 30px 30px 30px;
-    padding: 20px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
