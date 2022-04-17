@@ -124,6 +124,7 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    list-style: none;
   }
   button {
     width: 80px;
