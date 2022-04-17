@@ -34,6 +34,8 @@ button {
   width: 80px;
   background-color: rgb(130, 196, 44);
   border: none;
+  margin: 30px 30px 30px 30px;
+  padding: 20px;
   font-size: 11px;
   font-weight: normal;
   font-family: 'Malgun Gothic';
@@ -124,6 +126,8 @@ button {
   button {
     width: 80px;
     background-color: rgb(130, 196, 44);
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
     border: none;
     font-size: 11px;
     font-weight: normal;
@@ -215,6 +219,8 @@ button {
   button {
     width: 80px;
     background-color: rgb(130, 196, 44);
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
     border: none;
     font-size: 11px;
     font-weight: normal;
