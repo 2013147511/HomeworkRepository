@@ -131,7 +131,10 @@ button {
     border: 2px solid purple;
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
-  
+    width : 200px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .myimg{
     width:100px;
@@ -210,8 +213,12 @@ button {
   
   .imgbox{
     border: 2px solid purple;
-      margin: 10px 10px 10px 10px;
-      padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    width : 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   
   }
   .myimg{
