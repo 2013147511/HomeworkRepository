@@ -12,6 +12,7 @@
   color: white;
   text-align: center;
   font-family:sans-serif;
+  border : 3px solid navy;
   
 }
 @keyframes sliding_title{
