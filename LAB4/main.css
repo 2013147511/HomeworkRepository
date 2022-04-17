@@ -54,6 +54,14 @@ button {
   flex-wrap: wrap;
   justify-content: center;
 }
+.shoptitle {
+  background-color: rgb(55, 95, 95);
+  color: white;
+  text-align: center;
+  font-family:sans-serif;
+  border : 3px solid navy;
+  margin : 20px 20px 20px 20px
+}
 .imgbox{
   border: 2px solid purple;
   margin: 10px 10px 10px 10px;
@@ -142,14 +150,21 @@ button {
     
     
   }
-
+  
   .shop{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+  .shoptitle {
+    background-color: rgb(55, 95, 95);
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    border : 3px solid navy;
+    margin : 20px 20px 20px 20px
+  }
   .imgbox{
     border: 2px solid purple;
     margin: 10px 10px 10px 10px;
@@ -242,7 +257,14 @@ button {
     justify-content: center;
 
   }
-  
+  .shoptitle {
+    background-color: rgb(55, 95, 95);
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    border : 3px solid navy;
+    margin : 20px 20px 20px 20px
+  }
   .imgbox{
     border: 2px solid purple;
     margin: 10px 10px 10px 10px;
