@@ -26,6 +26,7 @@
   display: flex;
   border: 2px solid red;
   margin: 5px 5px 5px 5px;
+  padding: 20px;
   text-align: center;
   width: 1020px;
 }
@@ -43,7 +44,6 @@ button {
   border: 2px solid red;
   margin: 30px 30px 30px 30px;
   padding: 20px;
-  width: 1020px;
 }
 
 .imgbox{
@@ -107,6 +107,7 @@ button {
   .navi{
     display: flex;
     margin: 5px 5px 5px 5px;
+    padding: 20px;
     border: 2px solid red;
     flex-direction: column;
     flex-wrap: wrap;
@@ -116,7 +117,6 @@ button {
   button {
     width: 80px;
     background-color: rgb(130, 196, 44);
-    margin: 5px 5px 5px 5px;
     border: none;
     font-size: 11px;
     font-weight: normal;
