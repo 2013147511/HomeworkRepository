@@ -46,7 +46,7 @@ button {
   border: 2px solid red;
   margin: 30px 30px 30px 30px;
   padding: 20px;
-  
+  width : 1020px;
 }
 .shop{
   display: flex;
@@ -139,13 +139,13 @@ button {
     border: 2px solid red;
     margin: 30px 30px 30px 30px;
     padding: 20px;
-    width : 1020px;
+    
     
   }
 
   .shop{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
   }
