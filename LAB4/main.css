@@ -35,9 +35,7 @@
   padding: 20px;
   width: 1020px;
   text-align: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  
 }
 button {
   width: 80px;
