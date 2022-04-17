@@ -91,7 +91,7 @@ button {
   transform:scale(8.95,2.28);
 }
 .mytext{
-  font-size: 10px;
+  font-size: 20px;
 }
 }
 
@@ -195,6 +195,9 @@ button {
   #myimg2:hover{
     transform:scale(8.95,2.28);
   }
+  .mytext{
+    font-size: 10px;
+  }
 }
 
 @media screen and (min-width:481px) and (max-width:800px){
@@ -290,5 +293,8 @@ button {
   
   #myimg2:hover{
     transform:scale(8.95,2.28);
+  }
+  .mytext{
+    font-size: 15px;
   }
 }
