@@ -1,0 +1,301 @@
+@media screen and (min-width:801px){
+.title1 {
+  width: 1020px;
+  background-color: rgb(55, 95, 95);
+  color: white;
+  text-align: center;
+  font-family:sans-serif;
+  border : 3px solid navy;
+  margin : 20px 20px 20px 20px
+}
+@keyframes sliding_title{
+  from { width: 140%; margin-left: +1020px;} 
+  to {width: 100%;}
+}
+
+
+#title1_animation {
+  font-size: 40px;
+  text-align: center;
+  animation-duration: 2s;
+  animation-name: sliding_title;
+  margin: 5px 5px 5px 5px;
+}
+
+.navi{
+  display: flex;
+  border: 2px solid red;
+  margin: 5px 5px 5px 5px;
+  padding: 20px;
+  text-align: center;
+  width: 1020px;
+}
+button {
+  width: 120px;
+  background-color: rgb(130, 196, 44);
+  border: none;
+  margin: 30px 30px 30px 30px;
+  padding: 20px;
+  font-size: 11px;
+  font-weight: normal;
+  font-family: 'Malgun Gothic';
+
+}
+
+.mainindex{
+  border: 2px solid red;
+  margin: 5px 5px 5px 5px;
+  padding: 20px;
+  width : 1020px;
+}
+.shop{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shoptitle {
+  background-color: rgb(55, 95, 95);
+  color: white;
+  text-align: center;
+  font-family:sans-serif;
+  width:1020px;
+}
+.imgbox{
+  border: 2px solid purple;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  width : 200px;
+
+}
+.myimg{
+  width:100px;
+  height:100px;
+}
+
+#myimg1{
+  margin: 50px;
+  transition: transform 2s;
+}
+
+
+#myimg1:hover{
+  transform: rotate(360deg);
+}
+
+#myimg2{
+  margin: 50px;
+  transition: transform 2s;
+}
+
+#myimg2:hover{
+  transform:scale(8.95,2.28);
+}
+.mytext{
+  font-size: 20px;
+}
+}
+
+
+@media screen and (max-width:480px){
+  
+  
+  .title1 {
+    width: 1020px;
+    background-color: rgb(55, 95, 95);
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    border : 3px solid navy;
+    margin : 20px 20px 20px 20px
+  }
+  @keyframes sliding_title{
+    from { width: 140%; margin-left: +1020px;} 
+    to {width: 100%;}
+  }
+  
+  
+  #title1_animation {
+    font-size: 40px;
+    text-align: center;
+    animation-duration: 2s;
+    animation-name: sliding_title;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .navi{
+    display: flex;
+    margin: 5px 5px 5px 5px;
+    padding: 20px;
+    border: 2px solid red;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  button {
+    width: 120px;
+    background-color: rgb(130, 196, 44);
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
+    border: none;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: 'Malgun Gothic';
+  
+  }
+  
+  .mainindex{
+    border: 2px solid red;
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
+    
+    
+  }
+  
+  .shop{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .shoptitle {
+    background-color: rgb(55, 95, 95);
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+  }
+  .imgbox{
+    border: 2px solid purple;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    width : 200px;
+  }
+
+
+  .myimg{
+    width:100px;
+    height:100px;
+  }
+  
+  #myimg1{
+    margin: 50px;
+    transition: transform 2s;
+  }
+  
+  
+  #myimg1:hover{
+    transform: rotate(360deg);
+  }
+  
+  #myimg2{
+    margin: 50px;
+    transition: transform 2s;
+  }
+  
+  #myimg2:hover{
+    transform:scale(8.95,2.28);
+  }
+  .mytext{
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:800px){
+   
+  .title1 {
+    width: 1020px;
+    background-color: rgb(55, 95, 95);
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    border : 3px solid navy;
+    margin : 20px 20px 20px 20px
+  }
+  @keyframes sliding_title{
+    from { width: 140%; margin-left: +1020px;} 
+    to {width: 100%;}
+  }
+  
+  
+  #title1_animation {
+    font-size: 40px;
+    text-align: center;
+    animation-duration: 2s;
+    animation-name: sliding_title;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .navi{
+    display: flex;
+    margin: 5px 5px 5px 5px;
+    padding: 20px;
+    border: 2px solid red;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  button {
+    width: 120px;
+    background-color: rgb(130, 196, 44);
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
+    border: none;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: 'Malgun Gothic';
+  
+  }
+  
+  .mainindex{
+    border: 2px solid red;
+    margin: 30px 30px 30px 30px;
+    padding: 20px;
+    
+  }
+  .shop{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .shoptitle {
+    background-color: rgb(55, 95, 95);
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+  }
+  .imgbox{
+    border: 2px solid purple;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    width : 200px;
+  }
+  .myimg{
+    width:100px;
+    height:100px;
+  }
+  
+  #myimg1{
+    margin: 50px;
+    transition: transform 2s;
+  }
+  
+  
+  #myimg1:hover{
+    transform: rotate(360deg);
+  }
+  
+  #myimg2{
+    margin: 50px;
+    transition: transform 2s;
+  }
+  
+  #myimg2:hover{
+    transform:scale(8.95,2.28);
+  }
+  .mytext{
+    font-size: 15px;
+  }
+}
