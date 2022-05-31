@@ -54,6 +54,7 @@ button {
   justify-content: center;
   align-items: center;
   width : 1020px;
+  margin : 30px
 }
 .shop{
   display: flex;
