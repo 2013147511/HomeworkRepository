@@ -1,7 +1,7 @@
 div.allbox{
   display: flex;
-  justify-content: center;
   
+  align-items: center;
 }
 .title1 {
   display: flex;
