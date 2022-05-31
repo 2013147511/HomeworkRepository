@@ -12,7 +12,7 @@ loadimage().then((pizza)=>{
 
 function showpizza(pizza){
     const container = document.querySelector(".pizza")
-    container.innerHTML = pizzas.map((pizza)=>createHTMLIMAGE(pizza)).join("");
+    container.innerHTML = pizza.map((pizza)=>createHTMLIMAGE(pizza)).join("");
 }
 
 function createHTMLIMAGE(pizza){
