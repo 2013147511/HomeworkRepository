@@ -16,5 +16,5 @@ function showpizza(pizza){
 }
 
 function createHTMLIMAGE(pizza){
-    return '<div class="imgbox"><img src="${pizza.image}" class="myimg" id="myimg1"></div> ';
+    return `<div class="imgbox"><img src="${pizza.image}" class="myimg" id="myimg1"></div> `;
 }
