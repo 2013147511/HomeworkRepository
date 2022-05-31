@@ -1,0 +1,25 @@
+{
+    "product" : [
+        {
+            "name": "cheezepizza", 
+            "price" : "15000$",
+            "url" : "cheezepizza.jpg"
+        },
+        {
+            "name": "shrimppizza", 
+            "price" : "17000$",
+            "url" : "shrimppizza.jpg"
+        },
+        {
+            "name": "steakpizza", 
+            "price" : "12000$",
+            "url" : "steakpizza.jpg"
+        },
+        {
+            "name": "potatopizza", 
+            "price" : "16000$",
+            "url" : "potatopizza.jpg"
+        }
+    ]
+
+}
