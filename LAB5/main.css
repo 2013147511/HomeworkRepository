@@ -31,9 +31,9 @@ div.box{
 
 .navi{
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid red;
-  margin: 5px 5px 5px 5px;
-  padding: 20px;
   text-align: center;
   width: 1020px;
 }
