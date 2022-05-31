@@ -1,6 +1,6 @@
-div.allbox{
+div.box{
   display: flex;
-  
+  justify-content: center;
   align-items: center;
 }
 .title1 {
