@@ -12,7 +12,7 @@ shop().then((product)=>{
 
 
 function shoppd(product){
-    const mainproduct = document.querySelector(".imagecontent");
+    const mainproduct = document.querySelector("shop");
     mainproduct.innerHTML = product.map((product)=>mahtml(product)).join("");
     let search = document.getElementById("search").value.toLowerCase();
     
