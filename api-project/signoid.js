@@ -6,7 +6,7 @@ function printmyFullCreditsForGrad(){
 
 function printmySemesters(){
     const mySemesters = document.getElementById('mySemesters').value;
-    document.getElementById("result").innerText = mySemesters;
+    document.getElementById("result2").innerText = mySemesters;
 };
 
 
