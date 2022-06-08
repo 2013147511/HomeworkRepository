@@ -94,11 +94,12 @@
                 </select>
             </label></p>
             <p><label>졸업 이수 학점
-                <input id='myFullCreditsForGrad' onchange='printCreditsForGrad()'/>
-                <div id='result'></div>
+                <input id='myFullCreditsForGrad' onchange='printmyFullCreditsForGrad()'/>
+                <div id='result1'></div>
             </label></p>
             <p><label>지금까지 이수한 학기 수
-                <input name="mySemesters" type="number" min="1" max="100" step="1">
+                <input id='mySemesters' onchange='printmySemesters()'>
+                <div id='result2'></div>
             </label></p>
             <p><label>졸업신청 여부
                 <input name="myAppliedForGrad" value="true" type="checkbox">
