@@ -101,8 +101,9 @@
                 <input id='mySemesters' onchange='printmySemesters()'>
                 <div id='result2'></div>
             </label></p>
-            <p><label>졸업신청 여부
-                <input name="myAppliedForGrad" value="true" type="checkbox">
+            <p><label>졸업신청 여부(신청했으면 1 하지않았으면 0을 적으시오)
+                <input id='myAppliedForGrad' onchange='myAppliedForGrad'>
+                <div id='result3'></div>
             </label></p>
             <div id="credits-per-semester"></div>
 

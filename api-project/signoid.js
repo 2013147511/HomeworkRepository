@@ -9,4 +9,7 @@ function printmySemesters(){
     document.getElementById("result2").innerText = mySemesters;
 };
 
-
+function printmyAppliedForGrad(){
+    const myAppliedForGrad = document.getElementById('myAppliedForGrad').value;
+    document.getElementById("result3").innerText = myAppliedForGrad;
+};
