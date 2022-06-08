@@ -1,5 +1,7 @@
 var percent=0;
-
+function initPercent(){
+    percent=0;
+}
 function printmyFullCreditsForGrad(){
     const myFullCreditsForGrad = document.getElementById('myFullCreditsForGrad').value;
   };
@@ -30,15 +32,15 @@ function printmyAppliedForGrad(){
 function printselectCourse(){
     const selectCourse = document.getElementById('selectCourse').value;
     switch(selectCourse){
-        case 1: percent+=90*0.14-69*0.05+2.58*0.28-13.85+75*0.05;     // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수
+        case 1: percent+=90*0.14-69*0.05+2.58*0.28-13.85+75*0.05-0*1.24;     // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
         break;
-        case 2: percent+=80*0.14-145*0.05+3.3*0.28-13.85+56*0.05;
+        case 2: percent+=80*0.14-145*0.05+3.3*0.28-13.85+56*0.05-1*1.24;
         break;
-        case 3: percent+=100*0.14-177*0.05+3.81*0.28-13.85+70*0.05;
+        case 3: percent+=100*0.14-177*0.05+3.81*0.28-13.85+70*0.05-0*1.24;
         break;
-        case 4: percent+=140*0.14-161*0.05+4.17*0.28-13.85+120*0.05;
+        case 4: percent+=140*0.14-161*0.05+4.17*0.28-13.85+120*0.05-0*1.24;
         break;
-        case 5: percent+=90*0.14 -80*0.05+4*0.28-13.85+63*0.05;   //김영석교수님 분반으로 설정
+        case 5: percent+=90*0.14 -80*0.05+4*0.28-13.85+63*0.05-0*1.24;   //김영석교수님 분반으로 설정
         break;
     }
 };
