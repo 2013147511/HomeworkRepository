@@ -56,6 +56,6 @@ function printmyCredits(){
 function printmyLastSemesterCredits(){
     const myLastSemesterCredits = document.getElementById('myLastSemesterCredits').value;
     percent+=0.25*myLastSemesterCredits;
-    const signoid=1/(1+Math.exp(percent));
-    document.getElementById("result6").innerText ="이 과목의 수강신청성공확률은" +signoid+"%입니다";
+    const signoid=100*(1/(1+Math.exp(percent)));
+    document.getElementById("result6").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
 };
