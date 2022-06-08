@@ -2,13 +2,11 @@ var percent=0;
 
 function printmyFullCreditsForGrad(){
     const myFullCreditsForGrad = document.getElementById('myFullCreditsForGrad').value;
-    document.getElementById("result1").innerText = myFullCreditsForGrad;
   };
 
 //학년에 따라 수강신청 확률 변경
 function printmySemesters(){
     const mySemesters = document.getElementById('mySemesters').value;
-    document.getElementById("result2").innerText = mySemesters;
     if(mySemesters<3){
         percent+= -0.33;
     }else if(mySemesters<5){
@@ -24,7 +22,6 @@ function printmySemesters(){
 //졸업신청여부에 따라 수강신청 확률 변경
 function printmyAppliedForGrad(){
     const myAppliedForGrad = document.getElementById('myAppliedForGrad').value;
-    document.getElementById("result3").innerText = myAppliedForGrad;
     if(myAppliedForGrad==1){
         percent+=-0.22;
     }
@@ -32,7 +29,6 @@ function printmyAppliedForGrad(){
 //선택한과목에 따라 수강신청 확률 변경
 function printselectCourse(){
     const selectCourse = document.getElementById('selectCourse').value;
-    document.getElementById("result4").innerText = selectCourse;
     switch(selectCourse){
         case 1: percent+=90*0.14-69*0.05+2.58*0.28-13.85+75*0.05;     // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수
         break;
@@ -49,13 +45,11 @@ function printselectCourse(){
 //마일리지에 따라 수강신청 확률 변경
 function printCredits(){
     const Credits = document.getElementById('Credits').value;
-    document.getElementById("result10").innerText = Credits;
     percent+=0.11*Credits;
 };
 //총이수학점에 따라 수강신청 확률 변경
 function printmyAllCredits(){
     const myAllCredits = document.getElementById('myAllCredits').value;
-    document.getElementById("result5").innerText = myAllCredits;
     percent+=3.56*myAllCredits;
 };
 //직전학기이수학점에 따라 수강신청 확률 변경
@@ -66,5 +60,5 @@ function printmyLastSemesterCredits(){
 
 function printSuccessRate(){
     const signoid=100*(1/(1+Math.exp(-1*percent)));
-    document.getElementById("result").alert ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
+    document.getElementById("result").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
 }
