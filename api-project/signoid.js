@@ -44,5 +44,5 @@ function printmyCredits(){
 function printmyLastSemesterCredits(){
     const myLastSemesterCredits = document.getElementById('myLastSemesterCredits').value;
     percent+=0.25*myLastSemesterCredits;
-    document.getElementById("result6").innerText = percent;
+    document.getElementById("result6").innerText ="이 과목의 수강신청성공확률은" +percent+"입니다";
 };
