@@ -46,16 +46,23 @@ function printselectCourse(){
         break;
     }
 };
+//마일리지에 따라 수강신청 확률 변경
+function printCredits(){
+    const Credits = document.getElementById('Credits').value;
+    document.getElementById("result10").innerText = Credits;
+    percent+=0.11*Credits;
+};
 //총이수학점에 따라 수강신청 확률 변경
-function printmyCredits(){
-    const myCredits = document.getElementById('myCredits').value;
-    document.getElementById("result5").innerText = myCredits;
-    percent+=3.56*myCredits;
+function printmyAllCredits(){
+    const myAllCredits = document.getElementById('myAllCredits').value;
+    document.getElementById("result5").innerText = myAllCredits;
+    percent+=3.56*myAllCredits;
 };
 //직전학기이수학점에 따라 수강신청 확률 변경
 function printmyLastSemesterCredits(){
     const myLastSemesterCredits = document.getElementById('myLastSemesterCredits').value;
     percent+=0.25*myLastSemesterCredits;
+    percent=-percent;
     const signoid=100*(1/(1+Math.exp(percent)));
     document.getElementById("result6").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
 };
