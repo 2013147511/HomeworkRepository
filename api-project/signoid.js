@@ -1,4 +1,4 @@
 function printName()  {
-    const myFullCreditsForGrad = document.getElementById('myFullCreditsForGrad').value;
+    const myFullCreditsForGrad = document.getElementsByName('myFullCreditsForGrad').value;
     document.getElementById("result").innerText = myFullCreditsForGrad;
   }
