@@ -57,7 +57,7 @@ function signoidReady(){
 
     gradCredits = document.getElementsByName("myFullCreditsForGrad");  //gradCredits 에 졸업이수학점을 저장합니다.
     gradCredits = gradCredits[0].value;
-    gradCredits *=1;
+    gradCredits *=1; //spring to int
 
     semester = document.getElementsByName("mySemesters");  //semester 에 학기수를 저장합니다.
     semester = semester[0].value;                           // 3, 4, 5학년에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
