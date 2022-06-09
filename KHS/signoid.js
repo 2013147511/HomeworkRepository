@@ -370,6 +370,8 @@ function addCoursetoTable(){
 
 function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 리턴해주는 함수
     var signoidt=(1/(1+Math.exp((-1)*(signoidReady1+signoidReady2))));
+    console.log(signoidReady1);
+    console.log(signoidReady2);
     console.log(signoidt);
     return signoidt;
 }
