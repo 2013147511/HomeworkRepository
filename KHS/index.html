@@ -316,7 +316,7 @@
             document.querySelector("#others-panel").style.display = "none";
         }
 
-
+        // 각 테이블마다 과목을 넣기 위해 id를 생성
         // #timetable 테이블의 24개 row를 자동으로 생성해주는 코드
         // 이도엽 작성
         const hrsInDay = 24;
@@ -325,20 +325,20 @@
             let x = `
             <tr>
                 <th style = "border: 4px solid; border-color : rgb(187, 187, 187)">${i}-${i + 1}</th> 
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Tue${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Wed${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Thu${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Fri${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
             </tr>`; //change
             result += x;
         }
         document.querySelector("#timetable tbody").innerHTML = result;
         // 코드 끝
 
-
+        // 여기까지 (6)    
         
     </script>
 </html>
