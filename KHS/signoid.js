@@ -129,7 +129,7 @@ function signoidReady(){
 
 
 
-    document.getElementById("readyre").innerText = gradCredits;
+    document.getElementById("readyre").innerText = gradCredits+14;
 
 }
 
