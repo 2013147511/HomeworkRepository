@@ -81,7 +81,7 @@ function printselectCourse2(){
 function csMileage(){
     const csMileage = document.getElementById('csMileage').value;
     multicsMileage *= signoid;
-    document.getElementById("#calc-result-number").innerText =multicsMileage.toFixed(2);
+    document.getElementById("#calc-result-number").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다"+multicsMileage.toFixed(2);
 };
 
 //고른 과목에 따라 시간표에 해당과목 추가
