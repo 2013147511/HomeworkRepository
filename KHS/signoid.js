@@ -9,7 +9,7 @@ var courseScedule = new object();
 function signoidReady(){
     var myMajor = document.getElementsByName("myMajor");
     alert('선택된 옵션 text 값=' + myMajor.options[myMajor.selectedIndex].text); 
-    document.getElementById("readyre").innerText = "12"+mymajor.options[mymajor.selectedIndex].value +"11";
+    document.getElementById("readyre").innerText = "11";
 }
 
 
