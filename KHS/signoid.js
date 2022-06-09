@@ -78,7 +78,7 @@ function signoidReady(){
         signoidReady1 = signoidReady1 - 0.22;
     }
 
-    
+
     one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
     one_one *=1;   //spring to int
@@ -152,7 +152,7 @@ function signoidReady(){
     signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
 
-    document.getElementById("readyre").innerText = totalCredits+14;
+    document.getElementById("readyre").innerText = signoidReady1+14;
 
 }
 
