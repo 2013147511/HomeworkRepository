@@ -261,9 +261,9 @@
 
         <!-- 컴퓨터과학과 전공 과목 추가하는 panel; #cs-panel -->
         <div id="cs-panel">
-            <form id="selectCourse2" method="post" action="#" onchange='printselectCourse2()'>
+            <form  method="post" action="#" >
                 <p><label>교수/과목명
-                    <select name="csClass">
+                    <select id="selectCourse2" name="csClass" onchange='printselectCourse2()'>
                         <option value="이경호/인터넷프로그래밍">이경호/인터넷프로그래밍</option>
                         <option value="이수경/이산구조">이수경/이산구조</option>
                         <option value="황성재/자료구조">황성재/자료구조</option>
