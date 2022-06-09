@@ -5,10 +5,29 @@
         <meta charset="utf-8">
 
         <link rel="stylesheet" type="text/css" href="desktop.css">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="570379180403-ajdf8apkn7cof1ch0gq8h7jl13v3jfhp.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
         <!-- -------------여기서부터는 모든 페이지가 공통으로 가지는 부분------------- -->
-
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <script>
+          function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+    
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+          }
+        </script>
         <!-- 상단 헤더 바 -->
         <header>
             <!-- 세 줄 메뉴 아이콘 -->
@@ -69,7 +88,7 @@
             <p><label>졸업신청 여부(신청했으면 1 하지않았으면 0을 적으시오)
                 <input id='myAppliedForGrad' onchange='printmyAppliedForGrad()'>
             </label></p>
-            <table id="timetable">
+            <table id="Coursenumber">
                 <thead>
                     <tr>
                         <th>인터넷프로그래밍</th>
