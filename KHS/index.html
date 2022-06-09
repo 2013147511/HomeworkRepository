@@ -228,9 +228,8 @@
                 총 성공 확률 <span id="#calc-result-number">78</span>%
             </div>
         </div>
-        
+        <!--(5)여기까지-->
         <!-- 기타 과목 추가하는 panel; #others-panel -->
-        <!-- 마찬가지로 다른과목 추가 부분에서도 submit을 button으로 변경-->
         <div id="others-panel">
             <form method="post" action="#">
                 <p><label>교수
@@ -246,7 +245,6 @@
                 <input type="button" value="이 과목 추가하기">
             </form>
         </div>
-        <!--(5)여기까지-->
     </body>
     <script>
         // '내 정보' > '지금까지 이수한 학기 수(mySemesters)' 입력값에 따라서 '학기별 수강 학점(myCreditsAcquired#_#)' 입력란을 자동으로 생성해주는 코드
@@ -316,7 +314,7 @@
             document.querySelector("#others-panel").style.display = "none";
         }
 
-        // 각 테이블마다 과목을 넣기 위해 id를 생성
+
         // #timetable 테이블의 24개 row를 자동으로 생성해주는 코드
         // 이도엽 작성
         const hrsInDay = 24;
@@ -325,20 +323,20 @@
             let x = `
             <tr>
                 <th style = "border: 4px solid; border-color : rgb(187, 187, 187)">${i}-${i + 1}</th> 
-                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td id = "Tue${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td id = "Wed${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td id = "Thu${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td id = "Fri${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
-                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
             </tr>`; //change
             result += x;
         }
         document.querySelector("#timetable tbody").innerHTML = result;
         // 코드 끝
 
-        // 여기까지 (6)    
+
         
     </script>
 </html>
