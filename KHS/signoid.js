@@ -45,9 +45,20 @@ function signoidReady(){
     gradCredits = gradCredits[0].value;
 
     semester = document.getElementsByName("mySemesters");  //semester 에 학기수를 저장합니다.
-    semester = semester[0].value;
+    semester = semester[0].value;                           // 3, 4, 5학년에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
+    if(semester>8){
+        signoidReady1+=12.65;
+    }else if(semester>6){
+        signoidReady1-=1.19;
+    }else if(semester>4){
+        signoidReady1-=0.36;
+    }else{
+        signoidReady1+=0;
+    }
 
-    document.getElementById("readyre").innerText = semester+"14";
+
+
+    document.getElementById("readyre").innerText = signoid+"14";
 
 }
 
