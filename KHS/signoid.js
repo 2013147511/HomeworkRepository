@@ -153,14 +153,11 @@ function signoidReady(){
 
 //고른 과목에 따라 시간표에 해당과목 추가, 변수계산
 function addCoursetoTable(){
-    console.log(signoidReady1);
+
     var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
     console.log(selectCourseName1);
-    document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
-                                      document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
-                                      document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
-
+    
     Mileage = document.getElementsByName("csMileage"); 
     Mileage = Mileage[0].value;
     Mileage *=1; //spring to int
