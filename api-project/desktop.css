@@ -1,6 +1,14 @@
+/*구자성 추가 시작*/
+/*과목 숫자 표 가운데위치*/
+#Coursenumber{
+    justify-content: center;
+}
+/*구글버튼정렬*/
 .g-signin2{
     justify-content: center;
 }
+/*여기까지 구자성 추가*/
+
 body{
     /*the entire background*/
     background-color: antiquewhite;
