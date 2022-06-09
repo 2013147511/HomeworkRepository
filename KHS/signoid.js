@@ -9,7 +9,7 @@ var multicsMileage=1;
 var courseScedule = new object(); // 시간표 객체
 
 var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
-var intercept = 11.63; // intercept 값
+var intercept = new float(11.63); // intercept 값
 var totalNumber ; // 정원
 var numofParticipants; // 참여인원
 var totalNumber_1; //정원_1학년
