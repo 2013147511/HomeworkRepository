@@ -3,7 +3,10 @@ var finalPercent=1;
 var signoid=0; 
 var selectCourseName;
 var multicsMileage=1;
-var courseScedule = new object();
+
+
+
+var courseScedule = new object(); // 시간표 객체
 
 var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
 var intercept = 11.63; // intercept 값
