@@ -153,6 +153,9 @@ function signoidReady(){
 
     document.getElementById("readyre").innerText = signoidReady1+14;
     console.log(signoidReady1);
+    document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
+    document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
+    document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
 
 }
 
