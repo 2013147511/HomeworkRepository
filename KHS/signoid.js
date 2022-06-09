@@ -1,4 +1,21 @@
-var courseScedule = new object(); // 시간표 객체
+var courseScedule = {
+    CSI2109: {},
+    CSI2101: {},
+    CSI2103: {},
+    CSI3101: {},
+    CSI3102: {},
+    CAC1100: {},
+    CSI2102: {},
+    CSI2106: {},
+    CSI2109: {},
+    CSI4101: {},
+    CSI4109: {},
+    CSI4116: {},
+    CSI4117: {},
+    CSI4119: {},
+    CSI4120: {},
+    CSI4121: {}
+}; // 시간표 객체
 var probability=1;
 var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
 var totalNumber ; // 정원
@@ -21,6 +38,7 @@ var video = new Boolean(false);  //동영상콘텐츠
 var numOfMajor;  //전공자 정원
 var grad_is_NAY; //평점is NAY
 var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
+
 
 function signoidReady(){
     signoidReady1=11.63  //intercept를 기본으로 더합니다.
