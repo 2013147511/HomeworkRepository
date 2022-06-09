@@ -68,7 +68,7 @@
         <!-- <input id= ~ 구글캘린더 연동"> 부분 주석처리 후 구글 로그인 버튼 추가-->
         <nav>
             <ul>
-                <div class="g-signin2" style="display:inline;" data-width="270" data-height="60"  data-onsuccess="onSignIn" data-theme="dark"></div>
+                <div class="g-signin2" style="display:inline;" data-width="340" data-height="60"  data-onsuccess="onSignIn" data-theme="dark"></div>
             <!--<input id="integrate-googleCal" type="button" onclick="" value="구글 캘린더 연동">-->
                 <input id="share-kakao" type="button" onClick="" value="카카오톡으로 공유" />
             </ul>
@@ -139,7 +139,11 @@
             </label></p>
             <div id="credits-per-semester"></div>
 
-            <input type="submit" class="button" value="완료 >"> <!--change-->
+            <!--구자성 변경부분 (3)-->
+            <!--링크 바꾸지 않기 위해 submit을 button으로 변경-->
+        <!--<input type="submit" class="button" value="완료 >"> -->
+            <input type="button" class="button" value="완료 >"> 
+            <!--(3)여기까지-->
         </form>
         <div id="demo"></div>
 
