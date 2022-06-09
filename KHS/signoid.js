@@ -44,10 +44,10 @@ function signoidReady(){
     gradCredits = document.getElementsByName("myFullCreditsForGrad");  //gradCredits 에 졸업이수학점을 저장합니다.
     gradCredits = gradCredits[0].value;
 
-    semester = document.getElementsByName("mySemesters");  //gradCredits 에 졸업이수학점을 저장합니다.
+    semester = document.getElementsByName("mySemesters");  //semester 에 학기수를 저장합니다.
+    semester = semester[0].value;
 
-
-    document.getElementById("readyre").innerText = gradCredits+"14";
+    document.getElementById("readyre").innerText = semester+"14";
 
 }
 
