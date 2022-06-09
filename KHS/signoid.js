@@ -56,9 +56,9 @@ function signoidReady(){
         signoidReady1+=0;
     }
 
+    applyForGrad = document.getElementsByName("myAppliedForGrad").checked;
 
-
-    document.getElementById("readyre").innerText = signoidReady1+"14";
+    document.getElementById("readyre").innerText = applyForGrad+"14";
 
 }
 
