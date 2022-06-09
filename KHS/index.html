@@ -222,14 +222,15 @@
                     <input name="csMileage" type="number" min="0" max="36" step="1">
                 </label></p>
             <!--<input type="submit" value="이 과목 추가하기">--> 
-                <input type="submit" value="이 과목 추가하기" onclick='addCoursetoTable()'>
+                <input type="button" value="이 과목 추가하기" onclick='addCoursetoTable()'>
             </form>
             <div id="#calc-result">
                 총 성공 확률 <span id="#calc-result-number">78</span>%
             </div>
         </div>
-        <!--(5)여기까지-->
+        
         <!-- 기타 과목 추가하는 panel; #others-panel -->
+        <!-- 마찬가지로 다른과목 추가 부분에서도 submit을 button으로 변경-->
         <div id="others-panel">
             <form method="post" action="#">
                 <p><label>교수
@@ -241,9 +242,11 @@
                 <p><label>시간
                     <input name="othersTimeslot" type="number">
                 </label></p>
-                <input type="submit" value="이 과목 추가하기">
+            <!--<input type="submit" value="이 과목 추가하기">--> 
+                <input type="button" value="이 과목 추가하기">
             </form>
         </div>
+        <!--(5)여기까지-->
     </body>
     <script>
         // '내 정보' > '지금까지 이수한 학기 수(mySemesters)' 입력값에 따라서 '학기별 수강 학점(myCreditsAcquired#_#)' 입력란을 자동으로 생성해주는 코드
@@ -281,9 +284,11 @@
         }
         // 코드 끝
 
-
+        // 구자성 변경부분 (6)
+        // (5) 에서 submit을 button으로 변경하여 이쪽 또한 변경
         // #cs-panel과 #others-panel을 버튼 onclick 이벤트 발생에 따라 보이거나 숨기게 해주는 코드
         // 이도엽 작성
+        /*
         document.querySelector("#cs-panel-button").onclick = function(){
             document.querySelector("#cs-panel").style.display = "block";
         }
@@ -297,7 +302,19 @@
             document.querySelector("#others-panel").style.display = "none";
         }
         // 코드 끝
-
+        */
+        document.querySelector("#cs-panel-button").onclick = function(){
+            document.querySelector("#cs-panel").style.display = "block";
+        }
+        document.querySelector("#cs-panel input[type='button']").onclick = function(){
+            document.querySelector("#cs-panel").style.display = "none";
+        }
+        document.querySelector("#others-panel-button").onclick = function(){
+            document.querySelector("#others-panel").style.display = "block";
+        }
+        document.querySelector("#others-panel input[type='button']").onclick = function(){
+            document.querySelector("#others-panel").style.display = "none";
+        }
 
 
         // #timetable 테이블의 24개 row를 자동으로 생성해주는 코드
