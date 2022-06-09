@@ -143,7 +143,7 @@ function signoidReady(){
     signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
 
-    document.getElementById("readyre").innerText = signoidReady1+14;
+    document.getElementById("#calc-result-number").innerText =  probability.toFixed(2);
     console.log(signoidReady1);
     
 }
@@ -338,7 +338,7 @@ function addCoursetoTable(){
         default : 
         break;
     }
-
+    document.getElementById("#calc-result-number").innerText =  probability.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
 
 function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 리턴해주는 함수
