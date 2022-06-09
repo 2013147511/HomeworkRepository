@@ -63,35 +63,15 @@
         </header>
 
         <!-- 내비게이션 사이드 섹션 -->
-        
         <!--구자성 변경부분 (2)-->
-        <!-- <input id= ~ 구글캘린더 연동"> 부분 주석처리 후 구글 로그인 버튼 추가-->
         <nav>
             <ul>
-                <div class="g-signin2" style="display:inline;" data-width="340" data-height="60"  data-onsuccess="onSignIn" data-theme="dark"></div>
-            <!--<input id="integrate-googleCal" type="button" onclick="" value="구글 캘린더 연동">-->
+                <input id="integrate-googleCal" type="button" data-onsuccess="onSignIn" onclick="" value="구글 캘린더 연동">
                 <input id="share-kakao" type="button" onClick="" value="카카오톡으로 공유" />
             </ul>
         </nav>
-        <!--구글로그인 스크립트 추가-->
-        <script>
-            function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            var profile = googleUser.getBasicProfile();
-            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail());
-
-            // The ID token you need to pass to your backend:
-            var id_token = googleUser.getAuthResponse().id_token;
-            console.log("ID Token: " + id_token);
-             };
-        </script>
+        <!--data-onsuccess="onSignIn" 추가-->
         <!--(2)여기까지-->
-
         <!-- 페이지 설명 -->
         <h1>내 정보 불러오기</h1>
         <h2>과거 시간표에 추가해두셨던 과목들의 코드 목록을 알맞은 형식으로 입력해주세요.</h2>
@@ -139,14 +119,8 @@
             </label></p>
             <div id="credits-per-semester"></div>
 
-            <!--구자성 변경부분 (3)-->
-            <!--링크 바꾸지 않기 위해 submit을 button으로 변경-->
-        <!--<input type="submit" class="button" value="완료 >"> -->
-            <input type="button" class="button" value="완료 >" onclick='signoidReady()'>
-            <div id="readyre"></div> 
-            <!--(3)여기까지-->
+            <input type="submit" class="button" value="완료 >"> <!--change-->
         </form>
-        <div id="readyre"></div>
         <div id="demo"></div>
 
         <!-- 페이지 설명 -->
@@ -177,9 +151,6 @@
         <button id="others-panel-button">기타 과목 추가</button>
 
         <!-- 컴퓨터과학과 전공 과목 추가하는 panel; #cs-panel -->
-
-        <!--구자성 변경부분 (4)-->
-        <!--과목 목록 추가-->
         <div id="cs-panel">
             <form method="post" action="#">
                 <p><label>교수/과목명
@@ -187,48 +158,23 @@
                         <option value="이경호/인터넷프로그래밍">이경호/인터넷프로그래밍</option>
                         <option value="이수경/이산구조">이수경/이산구조</option>
                         <option value="황성재/자료구조">황성재/자료구조</option>
-                        <option value="차호정/운영체제">차호정/운영체제</option>
-                        <option value="김영석/컴퓨터아키텍쳐">김영석/컴퓨터아키텍쳐</option>
-                        <option value="이인권/객체지향프로그래밍">이인권/객체지향프로그래밍</option>
-                        <option value="벅스텔러번트/컴퓨터프로그래밍">벅스텔러번트/컴퓨터프로그래밍</option>
-                        <option value="이병주/컴퓨터프로그래밍">이병주/컴퓨터프로그래밍</option>
-                        <option value="최종현/컴퓨터과학입문">최종현/컴퓨터과학입문</option>
-                        <option value="이경우/컴퓨터아키텍쳐">이경우/컴퓨터아키텍쳐</option>
-                        <option value="이인권/컴퓨터그래픽스">이인권/컴퓨터그래픽스</option>
-                        <option value="조성배/인공지능">조성배/인공지능</option>
-                        <option value="소프트웨어종합설계">소프트웨어종합설계</option>
-                        <option value="송도경/정보보호">송도경/정보보호</option>
-                        <option value="김선주/컴퓨터비전">김선주/컴퓨터비전</option>
-                        <option value="조성배/데이타마이닝">조성배/데이타마이닝</option>
-                        <option value="이진호/멀티코어및GPU프로그래밍">이진호/멀티코어및GPU프로그래밍</option>
-                        <option value="박노성/기계학습">박노성/기계학습</option>
-                        <option value="여진영/빅데이터">여진영/빅데이터</option>
                     </select>
                 </label></p>
-         <!--(4)여기까지-->
-
-
-         <!--구자성 변경부분 (5)-->  
-         <!--시간대는 의미없으므로 제거-->
-         <!--submit 부분 button으로 변경-->         
-        
-         <!--      <p><label>시간대
+                <p><label>시간대
                     <select name="csTimeslot">
                         <option value="월2, 수23">월2, 수23</option>
                     </select>
-                </label></p>                                                 --> 
-       
+                </label></p>
                 <p><label>마일리지
                     <input name="csMileage" type="number" min="0" max="36" step="1">
                 </label></p>
-            <!--<input type="submit" value="이 과목 추가하기">--> 
-                <input type="button" value="이 과목 추가하기" onclick='addCoursetoTable()'>
+                <input type="submit" value="이 과목 추가하기">
             </form>
             <div id="#calc-result">
                 총 성공 확률 <span id="#calc-result-number">78</span>%
             </div>
         </div>
-        <!--(5)여기까지-->
+
         <!-- 기타 과목 추가하는 panel; #others-panel -->
         <div id="others-panel">
             <form method="post" action="#">
@@ -281,11 +227,10 @@
         }
         // 코드 끝
 
-        // 구자성 변경부분 (6)
-        // (5) 에서 submit을 button으로 변경하여 이쪽 또한 변경
+
+
         // #cs-panel과 #others-panel을 버튼 onclick 이벤트 발생에 따라 보이거나 숨기게 해주는 코드
         // 이도엽 작성
-        /*
         document.querySelector("#cs-panel-button").onclick = function(){
             document.querySelector("#cs-panel").style.display = "block";
         }
@@ -299,19 +244,7 @@
             document.querySelector("#others-panel").style.display = "none";
         }
         // 코드 끝
-        */
-        document.querySelector("#cs-panel-button").onclick = function(){
-            document.querySelector("#cs-panel").style.display = "block";
-        }
-        document.querySelector("#cs-panel input[type='button']").onclick = function(){
-            document.querySelector("#cs-panel").style.display = "none";
-        }
-        document.querySelector("#others-panel-button").onclick = function(){
-            document.querySelector("#others-panel").style.display = "block";
-        }
-        document.querySelector("#others-panel input[type='button']").onclick = function(){
-            document.querySelector("#others-panel").style.display = "none";
-        }
+
 
 
         // #timetable 테이블의 24개 row를 자동으로 생성해주는 코드
@@ -335,7 +268,7 @@
         document.querySelector("#timetable tbody").innerHTML = result;
         // 코드 끝
 
-        // 여기까지(6)
+
         
     </script>
 </html>
