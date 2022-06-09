@@ -60,8 +60,9 @@ function signoidReady(){
     gradCredits *=1; //spring to int
 
     semester = document.getElementsByName("mySemesters");  //semester 에 학기수를 저장합니다.
-    semester = semester[0].value;                           // 3, 4, 5학년에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
-    if(semester>=8){
+    semester = semester[0].value;     
+    semester *=1;       //spring to int                  
+    if(semester>=8){                    // 3, 4, 5학년에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
         signoidReady1=signoidReady1 +12.65;
     }else if(semester>=6){
         signoidReady1=signoidReady1 -1.19;
@@ -71,11 +72,13 @@ function signoidReady(){
         signoidReady1=signoidReady1;
     }
 
+
     applyForGrad = document.getElementsByName("myAppliedForGrad")[0].checked;  //졸업신청 여부값을 저장하고 true이면 그에맞는 상수를 더해줍니다.
     if(applyForGrad){
         signoidReady1 = signoidReady1 - 0.22;
     }
 
+    
     one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
     one_one *=1;   //spring to int
