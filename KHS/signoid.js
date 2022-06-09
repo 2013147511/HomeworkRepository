@@ -79,7 +79,7 @@ function signoidReady(){
     one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
     one_one *=1;   //spring to int
-    lastCredits = one_one;
+    lastCredits = one_one;                                          // 직전학기 이수학점 저장
     if(semester>1){
     one_two = document.getElementsByName("myCreditsAcquired1_2");
     one_two = one_two[0].value;
@@ -136,13 +136,20 @@ function signoidReady(){
     six_two *=1;
     lastCredits = six_two;
     }}}}}}}}}}}
-    totalCredits = one_one+one_two+two_one+two_two+thr_one+thr_two+four_one+four_two+five_one+five_two+six_one+six_two;
+
+    totalCredits = one_one+one_two+two_one+two_two+thr_one+thr_two+four_one+four_two+five_one+five_two+six_one+six_two; //총이수학점 계산
+    averageCredits = totalCredits/semester;             //학기당수강학점 = 총이수학점/학기수
+   
+    if(averageCredits>=18){                                     //학기당 평균이상학점이 18학점이상이면 성실하다고 가정할 수 있어 모든 과목을 초수강이라 가정합니다.
+        firstClass = true;
+        signoidReady1 = signoidReady1 +1.40;       //초수강이면 알맞은 계수를 더해줍니다.
+    }
+
+    signoidReady1 = signoidReady1 + (totalCredits/gradCredits)*3.56;      //총이수학점_졸업이수학점 * 알맞은 상수를 더해줍니다.
+    signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
 
-
-
-
-    document.getElementById("readyre").innerText = lastCredits+14;
+    document.getElementById("readyre").innerText = signoidReady1+14;
 
 }
 
