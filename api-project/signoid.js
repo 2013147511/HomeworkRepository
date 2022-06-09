@@ -1,6 +1,8 @@
-var percent=0;
-var signoid=0;
+var percent=0;  
+var finalPercent=1;  
+var signoid=0; 
 var selectCourseName;
+var multicsMileage;
 function initPercent(){
     percent=0;
     signoid=0;
@@ -67,7 +69,7 @@ function printmyLastSemesterCredits(){
 function printSuccessRate(){
     signoid=100*(1/(1+Math.exp(-1*percent)));
     document.getElementById("result").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
-}
+};
 
 
 function printselectCourse2(){
@@ -76,13 +78,19 @@ function printselectCourse2(){
     
 };
 
+function csMileage(){
+    const csMileage = document.getElementById('csMileage').value;
+    multicsMileage *= signoid;
+    document.getElementById("#calc-result-number").innerText =multicsMileage.toFixed(2);
+};
+
 //고른 과목에 따라 시간표에 해당과목 추가
 function addCoursetoTable(){
     const selectCourseName1 = document.getElementById('selectCourse2').value;
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
-                                      document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";  // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
+                                      document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";  
         break;
         case "이수경/이산구조":      document.getElementById("Tue3").innerText ="이수경/이산구조";   
                                     document.getElementById("Wed11").innerText ="이수경/이산구조";
