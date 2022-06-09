@@ -72,6 +72,9 @@ function printSuccessRate(){
 function printselectCourse2(){
     const selectCourse2 = document.getElementById('selectCourse2').value;
     selectCourseName = selectCourse2;
+    
+};
+function addCourse(){
     switch(selectCourseName){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
@@ -94,8 +97,5 @@ function printselectCourse2(){
                                     document.getElementById("Thu7").innerText ="김영석/컴퓨터아키텍쳐";
         break;
     }
-    
-};
-function addCourse(){
 
 }
