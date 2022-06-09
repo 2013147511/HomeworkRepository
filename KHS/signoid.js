@@ -9,7 +9,9 @@ var courseScedule = new object();
 function signoidReady(){
     var myMajor = document.getElementsByName("myMajor");
     myMajor = myMajor[0].options[myMajor[0].selectedIndex].value;
+    if(myMajor=="공과대학"){
     document.getElementById("readyre").innerText = myMajor;
+    }
 }
 
 
