@@ -5,30 +5,41 @@ var selectCourseName;
 var multicsMileage=1;
 var courseScedule = new object();
 
-var signoidReady1=0;
-var intercept = 11.63;
-var totalNumber ;
-var numofParticipants;
-var totalNumber_1;
-var majorElective;
-var majorRequired;
-var studentGrade;
-var Mileage;
-var numOfSubjects;
-var applyForGrad = new Boolean(false);
-var firstClass = new Boolean(false);
-var totalCredits;
-var gradCredits;
-var lastCredits;
-var currentCredits;
-var semester;
-var online = new Boolean(false);
-var video = new Boolean(false);
-var numOfMajor;
-var grad_is_NAY;
-var MajorIsIncluded = new Boolean(false);
+var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
+var intercept = 11.63; // intercept 값
+var totalNumber ; // 정원
+var numofParticipants; // 참여인원
+var totalNumber_1; //정원_1학년
+var majorElective = new Boolean(false); // 종별전선
+var majorRequired = new Boolean(false); // 종별전필
+var studentGrade; //학생들 평점
+var Mileage; // 넣은 마일리지
+var numOfSubjects; // 신청과목수
+var applyForGrad = new Boolean(false); //졸업신청여부
+var firstClass = new Boolean(false); //초수강여부
+var totalCredits; //총이수학점
+var gradCredits; //졸업이수학점
+var lastCredits; //직전학기이수학점
+var averageCredits; // 학기당 평균 수강학점
+var semester; //학기수
+var online = new Boolean(false); //실시간온라인
+var video = new Boolean(false);  //동영상콘텐츠
+var numOfMajor;  //전공자 정원
+var grad_is_NAY; //평점is NAY
+var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
 
-
+var one_one = 0;  //각 학기 수강학점
+var one_two = 0;
+var two_one = 0;
+var two_two = 0;
+var thr_one = 0;
+var thr_two = 0;
+var four_one =0;
+var four_two =0;
+var five_one =0;
+var five_two =0;
+var six_one = 0;
+var six_two = 0;
 
 function signoidReady(){
     signoidReady1=intercept;  //intercept를 기본으로 더합니다.
