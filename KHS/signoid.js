@@ -42,7 +42,7 @@ function signoidReady(){
     }
 
     var myFullCreditsForGrad = document.getElementsByName("myFullCreditsForGrad");
-    myFullCreditsForGrad = myFullCreditsForGrad[0].value;
+    
     document.getElementById("readyre").innerText = myFullCreditsForGrad;
 
 }
