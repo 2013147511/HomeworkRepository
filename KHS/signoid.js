@@ -5,13 +5,46 @@ var selectCourseName;
 var multicsMileage=1;
 var courseScedule = new object();
 
+var signoidReady1=0;
+var totalNumber ;
+var numofParticipants;
+var totalNumber_1;
+var majorElective;
+var majorRequired;
+var studentGrade;
+var Mileage;
+var numOfSubjects;
+var applyForGrad = new Boolean(false);
+var firstClass = new Boolean(false);
+var totalCredits;
+var gradCredits;
+var lastCredits;
+var currentCredits;
+var semester;
+var online = new Boolean(false);
+var video = new Boolean(false);
+var numOfMajor;
+var grad_is_NAY;
+var MajorIsIncluded = new Boolean(false);
+
+
 
 function signoidReady(){
-    var myMajor = document.getElementsByName("myMajor");
+    signoidReady1+=11.63;  //intercept를 기본으로 더합니다.
+
+
+    var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꿔서 전공자로 계산합니다.
     myMajor = myMajor[0].options[myMajor[0].selectedIndex].value;
     if(myMajor=="공과대학"){
-    document.getElementById("readyre").innerText = myMajor;
+    MajorIsIncluded = true;
+    }else{
+    MajorIsIncluded = false;
     }
+
+    var myFullCreditsForGrad = document.getElementsByName("myFullCreditsForGrad");
+    myFullCreditsForGrad = myFullCreditsForGrad[0].value;
+    document.getElementById("readyre").innerText = myFullCreditsForGrad;
+
 }
 
 
