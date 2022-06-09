@@ -76,6 +76,7 @@ function printselectCourse2(){
     
 };
 
+//고른 과목에 따라 시간표에 해당과목 추가
 function addCoursetoTable(){
     const selectCourseName1 = document.getElementById('selectCourse2').value;
     switch(selectCourseName1){
@@ -99,7 +100,65 @@ function addCoursetoTable(){
                                     document.getElementById("Thu6").innerText ="김영석/컴퓨터아키텍쳐";  
                                     document.getElementById("Thu7").innerText ="김영석/컴퓨터아키텍쳐";
         break;
-        default : document.getElementById("Thu12").innerText ="값이없습니다";
+        case "이인권/객체지향프로그래밍": document.getElementById("Tue8").innerText ="이인권/객체지향프로그래밍";
+                                        document.getElementById("Tue9").innerText ="이인권/객체지향프로그래밍";  
+                                        document.getElementById("Thu11").innerText ="이인권/객체지향프로그래밍";
+        break;
+        case "벅스텔러번트/컴퓨터프로그래밍": document.getElementById("Thu5").innerText ="벅스텔러번트/컴퓨터프로그래밍";
+                                            document.getElementById("Thu6").innerText ="벅스텔러번트/컴퓨터프로그래밍";  
+                                            document.getElementById("Thu9").innerText ="벅스텔러번트/컴퓨터프로그래밍";
+                                            document.getElementById("Thu10").innerText ="벅스텔러번트/컴퓨터프로그래밍";
+        break;
+        case "이병주/컴퓨터프로그래밍":       document.getElementById("Thu5").innerText ="이병주/컴퓨터프로그래밍";
+                                            document.getElementById("Thu6").innerText ="이병주/컴퓨터프로그래밍";  
+                                            document.getElementById("Thu9").innerText ="이병주/컴퓨터프로그래밍";
+                                            document.getElementById("Thu10").innerText ="이병주/컴퓨터프로그래밍";                                    
+        break;
+        case "최종현/컴퓨터과학입문":     document.getElementById("Wed8").innerText ="최종현/컴퓨터과학입문";
+                                        document.getElementById("Fri6").innerText ="최종현/컴퓨터과학입문";  
+                                        document.getElementById("Fri7").innerText ="최종현/컴퓨터과학입문";
+        break;
+        case "이경우/컴퓨터아키텍쳐":     document.getElementById("Tue2").innerText ="이경우/컴퓨터아키텍쳐";
+                                        document.getElementById("Tue3").innerText ="이경우/컴퓨터아키텍쳐";  
+                                        document.getElementById("Thu2").innerText ="이경우/컴퓨터아키텍쳐";
+        break;
+        case "이인권/컴퓨터그래픽스":     document.getElementById("Tue6").innerText ="이인권/컴퓨터그래픽스";
+                                        document.getElementById("Tue7").innerText ="이인권/컴퓨터그래픽스";  
+                                        document.getElementById("Thu12").innerText ="이인권/컴퓨터그래픽스";
+        break;
+        case "조성배/인공지능":          document.getElementById("Mon6").innerText ="조성배/인공지능";
+                                        document.getElementById("Mon7").innerText ="조성배/인공지능";  
+                                        document.getElementById("Wed6").innerText ="조성배/인공지능";
+        break;
+        case "소프트웨어종합설계":        document.getElementById("Wed9").innerText ="소프트웨어종합설계";
+                                        document.getElementById("Fri7").innerText ="소프트웨어종합설계";  
+                                        document.getElementById("Fri8").innerText ="소프트웨어종합설계";
+        break;
+        case "송도경/정보보호":          document.getElementById("Mon6").innerText ="송도경/정보보호";
+                                        document.getElementById("Mon7").innerText ="송도경/정보보호";  
+                                        document.getElementById("Wed6").innerText ="송도경/정보보호";
+        break;
+        case "김선주/컴퓨터비전":          document.getElementById("Tue3").innerText ="김선주/컴퓨터비전";
+                                        document.getElementById("Tue4").innerText ="김선주/컴퓨터비전";  
+                                        document.getElementById("Thu3").innerText ="김선주/컴퓨터비전";
+        break;
+        case "조성배/데이타마이닝":       document.getElementById("Mon2").innerText ="조성배/데이타마이닝";
+                                        document.getElementById("Wed2").innerText ="조성배/데이타마이닝";  
+                                        document.getElementById("Wed3").innerText ="조성배/데이타마이닝";
+        break;
+        case "이진호/멀티코어및GPU프로그래밍":       document.getElementById("Wed7").innerText ="이진호/멀티코어및GPU프로그래밍";
+                                                    document.getElementById("Wed8").innerText ="이진호/멀티코어및GPU프로그래밍";  
+                                                    document.getElementById("Fri6").innerText ="이진호/멀티코어및GPU프로그래밍";
+        break;
+        case "박노성/기계학습":       document.getElementById("Tue5").innerText ="박노성/기계학습";
+                                        document.getElementById("Thu4").innerText ="박노성/기계학습";  
+                                        document.getElementById("Thu5").innerText ="박노성/기계학습";
+        break;
+        case "여진영/빅데이터":       document.getElementById("Tue6").innerText ="여진영/빅데이터";
+                                        document.getElementById("Tue7").innerText ="여진영/빅데이터";  
+                                        document.getElementById("Thu6").innerText ="여진영/빅데이터";
+        break;
+        default : 
         break;
     }
 
