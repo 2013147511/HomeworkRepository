@@ -34,7 +34,7 @@ var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
 
 function signoidReady(){
     signoidReady1=intercept;  //intercept를 기본으로 더합니다.
-    document.getElementById("readyre").innerText = signoidReady1+14;
+    document.getElementById("readyre").innerText = intercept+14;
     var one_one = 0;  //각 학기 수강학점
     var one_two = 0;
     var two_one = 0;
