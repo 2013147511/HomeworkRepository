@@ -41,6 +41,17 @@
                 overflow: scroll;
             }
         </style>
+        
+        <!--구자성 변경부분 (1)-->
+        <!--구글 로그인 관련 정보 추가-->
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="570379180403-ajdf8apkn7cof1ch0gq8h7jl13v3jfhp.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+        <!--sinoid.js참조 추가-->
+        <script type="text/javascript" src="signoid.js"></script>
+        <!--(1)여기까지-->
+
     </head>
     <body>
         <!-- -------------여기서부터는 모든 페이지가 공통으로 가지는 부분------------- -->
@@ -52,13 +63,15 @@
         </header>
 
         <!-- 내비게이션 사이드 섹션 -->
+        <!--구자성 변경부분 (2)-->
         <nav>
             <ul>
-                <input id="integrate-googleCal" type="button" onclick="" value="구글 캘린더 연동">
+                <input id="integrate-googleCal" type="button" data-onsuccess="onSignIn" onclick="" value="구글 캘린더 연동">
                 <input id="share-kakao" type="button" onClick="" value="카카오톡으로 공유" />
             </ul>
         </nav>
-
+        <!--data-onsuccess="onSignIn" 추가-->
+        <!--(2)여기까지-->
         <!-- 페이지 설명 -->
         <h1>내 정보 불러오기</h1>
         <h2>과거 시간표에 추가해두셨던 과목들의 코드 목록을 알맞은 형식으로 입력해주세요.</h2>
