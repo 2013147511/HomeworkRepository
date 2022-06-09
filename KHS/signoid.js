@@ -6,6 +6,7 @@ var multicsMileage=1;
 var courseScedule = new object();
 
 var signoidReady1=0;
+var intercept = 11.63;
 var totalNumber ;
 var numofParticipants;
 var totalNumber_1;
@@ -30,7 +31,7 @@ var MajorIsIncluded = new Boolean(false);
 
 
 function signoidReady(){
-    signoidReady1=11.63;  //intercept를 기본으로 더합니다.
+    signoidReady1=intercept;  //intercept를 기본으로 더합니다.
 
 
     var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
@@ -61,11 +62,48 @@ function signoidReady(){
         signoidReady1 = signoidReady1 - 0.22;
     }
 
-    var one_one = document.getElementsByName("myCreditsAcquired1_1");
+    var one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
 
+    var one_two = document.getElementsByName("myCreditsAcquired1_2");
+    one_two = one_two[0].value;
 
-    document.getElementById("readyre").innerText = one_one+"14";
+    var two_one = document.getElementsByName("myCreditsAcquired2_1");
+    two_one = two_one[0].value;
+
+    var two_two = document.getElementsByName("myCreditsAcquired2_2");
+    two_two = two_two[0].value;
+
+    var thr_one = document.getElementsByName("myCreditsAcquired3_1");
+    thr_one = thr_one[0].value;
+
+    var thr_two = document.getElementsByName("myCreditsAcquired3_2");
+    thr_two = thr_two[0].value;
+
+    var four_one = document.getElementsByName("myCreditsAcquired4_1");
+    four_one = four_one[0].value;
+
+    var four_two = document.getElementsByName("myCreditsAcquired4_2");
+    four_two = four_two[0].value;
+
+    var five_one = document.getElementsByName("myCreditsAcquired5_1");
+    five_one = five_one[0].value;
+
+    var five_two = document.getElementsByName("myCreditsAcquired5_2");
+    five_two = five_two[0].value;
+
+    var six_one = document.getElementsByName("myCreditsAcquired6_1");
+    six_one = six_one[0].value;
+
+    var six_two = document.getElementsByName("myCreditsAcquired6_2");
+    six_two = six_two[0].value;
+
+    totalCredits = one_one+one_two+two_one+two_two+thr_one+thr_two+four_one+four_two+five_one+five_two+six_one+six_two;
+
+
+
+
+    document.getElementById("readyre").innerText = totalCredits+"14";
 
 }
 
