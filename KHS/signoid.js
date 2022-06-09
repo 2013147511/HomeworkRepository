@@ -267,10 +267,6 @@ function csMileage(){
 
 //고른 과목에 따라 시간표에 해당과목 추가
 function addCoursetoTable(){
-    var selectCourseName1 = document.getElementsByName("csClass");  
-    selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
-    
-    document.getElementById("readyre").innerText = selectCourseName1;
     
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2",).innerText ="이경호/인터넷프로그래밍";
