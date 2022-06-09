@@ -71,15 +71,25 @@ function printSuccessRate(){
 function printselectCourse2(){
     const selectCourse2 = document.getElementById('selectCourse2').value;
     switch(selectCourse2){
-        case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";document.getElementById("Mon3").innerText ="이경호/인터넷프로그래밍";    // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
+        case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
+                                      document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
+                                      document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";  // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
         break;
-        case "이수경/이산구조": percent+=80*0.14-145*0.05+3.3*0.28-13.85+56*0.05-1*1.24;
+        case "이수경/이산구조":      document.getElementById("Tue3").innerText ="이수경/이산구조";   
+                                    document.getElementById("Wed11").innerText ="이수경/이산구조";
+                                    document.getElementById("Wed12").innerText ="이수경/이산구조";
         break;
-        case "황성재/자료구조": percent+=100*0.14-177*0.05+3.81*0.28-13.85+70*0.05-0*1.24;
+        case "황성재/자료구조": document.getElementById("Tue6").innerText ="황성재/자료구조";
+                               document.getElementById("Thu6").innerText ="황성재/자료구조";  
+                               document.getElementById("Thu7").innerText ="황성재/자료구조";
         break;
-        case "차호정/운영체제": percent+=140*0.14-161*0.05+4.17*0.28-13.85+120*0.05-0*1.24;
+        case "차호정/운영체제":  document.getElementById("Mon8").innerText ="차호정/운영체제";
+                                document.getElementById("Wed3").innerText ="차호정/운영체제";  
+                                document.getElementById("Wed4").innerText ="차호정/운영체제";
         break;
-        case "김영석/컴퓨터아키텍쳐": percent+=90*0.14 -80*0.05+4*0.28-13.85+63*0.05-0*1.24;   //김영석교수님 분반으로 설정
+        case "김영석/컴퓨터아키텍쳐": document.getElementById("Tue8").innerText ="김영석/컴퓨터아키텍쳐";
+                                    document.getElementById("Thu6").innerText ="김영석/컴퓨터아키텍쳐";  
+                                    document.getElementById("Thu7").innerText ="김영석/컴퓨터아키텍쳐";
         break;
     }
 };
