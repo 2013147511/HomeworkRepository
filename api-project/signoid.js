@@ -7,6 +7,7 @@ function initPercent(){
     percent=0;
     signoid=0;
 }
+var courseScedule = {};
 function printmyFullCreditsForGrad(){
     const myFullCreditsForGrad = document.getElementById('myFullCreditsForGrad').value;
   };
@@ -88,13 +89,14 @@ function csMileage(){
 function addCoursetoTable(){
     const selectCourseName1 = document.getElementById('selectCourse2').value;
     switch(selectCourseName1){
-        case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
-                                      document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
-                                      document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";  
+        case "이경호/인터넷프로그래밍": document.getElementById("Mon2","Wed2","Wed3").innerText ="이경호/인터넷프로그래밍";
+                                      
+                                      courseScedule.이경호/인터넷프로그래밍.push('Mon2','Wed2', 'Wed3');
         break;
         case "이수경/이산구조":      document.getElementById("Tue3").innerText ="이수경/이산구조";   
                                     document.getElementById("Wed11").innerText ="이수경/이산구조";
                                     document.getElementById("Wed12").innerText ="이수경/이산구조";
+                                    courseScedule.이수경/이산구조.push('Mon2','Wed2', 'Wed3');
         break;
         case "황성재/자료구조": document.getElementById("Tue6").innerText ="황성재/자료구조";
                                document.getElementById("Thu6").innerText ="황성재/자료구조";  
