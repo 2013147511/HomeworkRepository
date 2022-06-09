@@ -53,12 +53,19 @@ function signoidReady(){
     }else if(semester>4){
         signoidReady1=signoidReady1 -0.36;
     }else{
-        signoidReady1+=0;
+        signoidReady1=signoidReady1;
     }
 
-    applyForGrad = document.getElementsByName("myAppliedForGrad")[0].checked;
+    applyForGrad = document.getElementsByName("myAppliedForGrad")[0].checked;  //졸업신청 여부값을 저장하고 true이면 그에맞는 상수를 더해줍니다.
+    if(applyForGrad){
+        signoidReady1 = signoidReady1 - 0.22;
+    }
 
-    document.getElementById("readyre").innerText = applyForGrad+"14";
+    var one_one = document.getElementsByName("myCreditsAcquired1_1");
+    one_one = one_one[0].value;
+
+
+    document.getElementById("readyre").innerText = one_one+"14";
 
 }
 
