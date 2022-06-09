@@ -266,7 +266,7 @@ function csMileage(){
 
 //고른 과목에 따라 시간표에 해당과목 추가
 function addCoursetoTable(){
-    var selectCourseName1 = document.getElementsByName("csClass");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
+    var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
 
     document.getElementById("readyre").innerText = selectCourseName1;
