@@ -2,7 +2,7 @@ var percent=0;
 var finalPercent=1;  
 var signoid=0; 
 var selectCourseName;
-var multicsMileage;
+var multicsMileage=1;
 function initPercent(){
     percent=0;
     signoid=0;
