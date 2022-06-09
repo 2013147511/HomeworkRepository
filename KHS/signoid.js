@@ -191,7 +191,7 @@ function addCoursetoTable(){
                                       courseScedule.CSI2109.professorName="이경호";
                                       courseScedule.CSI2109.courseName="인터넷프로그래밍";
                                       var signoid2109 = 90*0.14 + 69*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 2.58*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+75*(-0.12)+0*(-1.42)+75*0*(0.05)+6*0*0.43;
-                                      probability *=signoid(signoidReady1*signoid2109);
+                                      probability *=signoid(signoidReady1,signoid2109);
         break;
         case "이수경/이산구조":      document.getElementById("Tue3").innerText ="이수경/이산구조";   
                                     document.getElementById("Wed11").innerText ="이수경/이산구조";
@@ -200,7 +200,7 @@ function addCoursetoTable(){
                                     courseScedule.CSI2101.professorName="이수경";
                                     courseScedule.CSI2101.courseName="이산구조";
                                     var signoid2101 = 80*0.14 + 145*(-0.05) + 0*(-0.33)+0*(-1.57) +0*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 1*(-1.2)+56*(-0.12)+1*(-1.42)+56*0*(0.05)+6*1*0.43;
-                                    probability *=signoid(signoidReady1*signoid2101);
+                                    probability *=signoid(signoidReady1,signoid2101);
         break;
         case "황성재/자료구조": document.getElementById("Tue6").innerText ="황성재/자료구조";
                                document.getElementById("Thu6").innerText ="황성재/자료구조";  
@@ -209,7 +209,7 @@ function addCoursetoTable(){
                                courseScedule.CSI2103.professorName="황성재";
                                courseScedule.CSI2103.courseName="자료구조";
                                var signoid2103 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                probability *=signoid(signoidReady1*signoid2103);
+                                probability *=signoid(signoidReady1,signoid2103);
         break;
         case "차호정/운영체제":  document.getElementById("Mon8").innerText ="차호정/운영체제";       //여기부터 변수값 바꿔야함.
                                 document.getElementById("Wed3").innerText ="차호정/운영체제";  
@@ -218,7 +218,7 @@ function addCoursetoTable(){
                                 courseScedule.CSI3101.professorName="차호정";
                                 courseScedule.CSI3101.courseName="운영체제";
                                 var signoid3101 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                probability *=signoid(signoidReady1*signoid3101);
+                                probability *=signoid(signoidReady1,signoid3101);
         break;
         case "김영석/컴퓨터아키텍쳐": document.getElementById("Tue8").innerText ="김영석/컴퓨터아키텍쳐";
                                     document.getElementById("Thu6").innerText ="김영석/컴퓨터아키텍쳐";  
@@ -227,7 +227,7 @@ function addCoursetoTable(){
                                     courseScedule.CSI3102.professorName="김영석";
                                     courseScedule.CSI3102.courseName="컴퓨터아키텍쳐";
                                     var signoid3102 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                    probability *=signoid(signoidReady1*signoid3102);
+                                    probability *=signoid(signoidReady1,signoid3102);
         break;
         case "이인권/객체지향프로그래밍": document.getElementById("Tue8").innerText ="이인권/객체지향프로그래밍";
                                         document.getElementById("Tue9").innerText ="이인권/객체지향프로그래밍";  
@@ -236,7 +236,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI2102.professorName="이인권";
                                         courseScedule.CSI2102.courseName="객체지향프로그래밍";
                                         var signoid2102 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid2102);
+                                        probability *=signoid(signoidReady1,signoid2102);
         break;
         case "벅스텔러번트/컴퓨터프로그래밍": document.getElementById("Thu5").innerText ="벅스텔러번트/컴퓨터프로그래밍";
                                             document.getElementById("Thu6").innerText ="벅스텔러번트/컴퓨터프로그래밍";  
@@ -246,7 +246,7 @@ function addCoursetoTable(){
                                             courseScedule.CAC1100.professorName="벅스텔러번트";
                                             courseScedule.CAC1100.courseName="컴퓨터프로그래밍";
                                             var signoid1100 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                            probability *=signoid(signoidReady1*signoid1100);
+                                            probability *=signoid(signoidReady1,signoid1100);
         break;    
         case "이병주/컴퓨터프로그래밍":       document.getElementById("Thu5").innerText ="이병주/컴퓨터프로그래밍";
                                             document.getElementById("Thu6").innerText ="이병주/컴퓨터프로그래밍";  
@@ -265,7 +265,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI2106.professorName="최종현";
                                         courseScedule.CSI2106.courseName="컴퓨터과학입문";
                                         var signoid2106 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid2106);
+                                        probability *=signoid(signoidReady1,signoid2106);
         break;
         case "이경우/컴퓨터아키텍쳐":     document.getElementById("Tue2").innerText ="이경우/컴퓨터아키텍쳐";
                                         document.getElementById("Tue3").innerText ="이경우/컴퓨터아키텍쳐";  
@@ -274,7 +274,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI3102.professorName="이경우";
                                         courseScedule.CSI3102.courseName="컴퓨터아키텍쳐";
                                         var signoid3102 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid3102);
+                                        probability *=signoid(signoidReady1,signoid3102);
         break;
         case "이인권/컴퓨터그래픽스":     document.getElementById("Tue6").innerText ="이인권/컴퓨터그래픽스";
                                         document.getElementById("Tue7").innerText ="이인권/컴퓨터그래픽스";  
@@ -283,7 +283,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4105.professorName="이인권";
                                         courseScedule.CSI4105.courseName="컴퓨터그래픽스";
                                         var signoid4105 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4105);
+                                        probability *=signoid(signoidReady1,signoid4105);
         break;
         case "조성배/인공지능":          document.getElementById("Mon6").innerText ="조성배/인공지능";
                                         document.getElementById("Mon7").innerText ="조성배/인공지능";  
@@ -292,7 +292,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4108.professorName="조성배";
                                         courseScedule.CSI4108.courseName="인공지능";
                                         var signoid4108 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4108);
+                                        probability *=signoid(signoidReady1,signoid4108);
         break;
         case "소프트웨어종합설계":        document.getElementById("Wed9").innerText ="소프트웨어종합설계";
                                         document.getElementById("Fri7").innerText ="소프트웨어종합설계";  
@@ -301,7 +301,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4101.professorName="";
                                         courseScedule.CSI4101.courseName="소프트웨어종합설계";
                                         var signoid4101 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4101);
+                                        probability *=signoid(signoidReady1,signoid4101);
         break;
         case "송도경/정보보호":          document.getElementById("Mon6").innerText ="송도경/정보보호";
                                         document.getElementById("Mon7").innerText ="송도경/정보보호";  
@@ -310,7 +310,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4109.professorName="이인권송도경";
                                         courseScedule.CSI4109.courseName="정보보호";
                                         var signoid4109 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4109);
+                                        probability *=signoid(signoidReady1,signoid4109);
         break;
         case "김선주/컴퓨터비전":          document.getElementById("Tue3").innerText ="김선주/컴퓨터비전";
                                         document.getElementById("Tue4").innerText ="김선주/컴퓨터비전";  
@@ -319,7 +319,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4116.professorName="김선주";
                                         courseScedule.CSI4116.courseName="컴퓨터비전";
                                         var signoid4106 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4106);
+                                        probability *=signoid(signoidReady1,signoid4106);
         break;
         case "조성배/데이타마이닝":       document.getElementById("Mon2").innerText ="조성배/데이타마이닝";
                                         document.getElementById("Wed2").innerText ="조성배/데이타마이닝";  
@@ -328,7 +328,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4117.professorName="조성배";
                                         courseScedule.CSI4117.courseName="데이터마이닝";
                                         var signoid4117 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4117);
+                                        probability *=signoid(signoidReady1,signoid4117);
         break;
         case "이진호/멀티코어및GPU프로그래밍":       document.getElementById("Wed7").innerText ="이진호/멀티코어및GPU프로그래밍";
                                                     document.getElementById("Wed8").innerText ="이진호/멀티코어및GPU프로그래밍";  
@@ -337,7 +337,7 @@ function addCoursetoTable(){
                                                     courseScedule.CSI4119.professorName="이진호";
                                                     courseScedule.CSI4119.courseName="멀티코어및GPU프로그래밍";
                                                     var signoid4119 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                                    probability *=signoid(signoidReady1*signoid4119);
+                                                    probability *=signoid(signoidReady1,signoid4119);
 
         break;
         case "박노성/기계학습":       document.getElementById("Tue5").innerText ="박노성/기계학습";
@@ -347,7 +347,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4120.professorName="박노성";
                                         courseScedule.CSI4120.courseName="기계학습";
                                         var signoid4120 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4120);
+                                        probability *=signoid(signoidReady1,signoid4120);
         break;
         case "여진영/빅데이터":       document.getElementById("Tue6").innerText ="여진영/빅데이터";
                                         document.getElementById("Tue7").innerText ="여진영/빅데이터";  
@@ -356,7 +356,7 @@ function addCoursetoTable(){
                                         courseScedule.CSI4121.professorName="여진영";
                                         courseScedule.CSI4121.courseName="빅데이터";
                                         var signoid4121 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*0*0.43;
-                                        probability *=signoid(signoidReady1*signoid4121);
+                                        probability *=signoid(signoidReady1,signoid4121);
         break;
         default : 
         break;
