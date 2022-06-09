@@ -363,42 +363,14 @@
 
         // #cs-panel과 #others-panel을 버튼 onclick 이벤트 발생에 따라 보이거나 숨기게 해주는 코드
         // 이도엽 작성
-        document.querySelector("#cs-panel-button").onclick = function(){
-            document.querySelector("#cs-panel").style.display = "block";
-        }
-        document.querySelector("#cs-panel input[type='submit']").onclick = function(){
-            document.querySelector("#cs-panel").style.display = "none";
-        }
-        document.querySelector("#others-panel-button").onclick = function(){
-            document.querySelector("#others-panel").style.display = "block";
-        }
-        document.querySelector("#others-panel input[type='submit']").onclick = function(){
-            document.querySelector("#others-panel").style.display = "none";
-        }
+
         // 코드 끝
 
 
 
         // #timetable 테이블의 24개 row를 자동으로 생성해주는 코드
         // 이도엽 작성
-        const hrsInDay = 24;
-        var result = "";
-        for(let i = 0; i < hrsInDay; i++) {
-            let x = `
-            <tr>
-                <th>${i}-${i + 1}</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>`;
-            result += x;
-        }
-        document.querySelector("#timetable tbody").innerHTML = result;
-        // 코드 끝
+    
 
 
         
