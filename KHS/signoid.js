@@ -9,7 +9,6 @@ var multicsMileage=1;
 var courseScedule = new object(); // 시간표 객체
 
 var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
-var intercept = 11.63; // intercept 값
 var totalNumber ; // 정원
 var numofParticipants; // 참여인원
 var totalNumber_1; //정원_1학년
@@ -31,11 +30,9 @@ var numOfMajor;  //전공자 정원
 var grad_is_NAY; //평점is NAY
 var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
 
-
 function signoidReady(){
-    intercept*=1;
-    signoidReady1=intercept;  //intercept를 기본으로 더합니다.
-    document.getElementById("readyre").innerText = 14+14;
+    signoidReady1=11.63  //intercept를 기본으로 더합니다.
+
     var one_one = 0;  //각 학기 수강학점
     var one_two = 0;
     var two_one = 0;
@@ -154,7 +151,7 @@ function signoidReady(){
     signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
 
-    
+    document.getElementById("readyre").innerText = signoidReady1+14;
 
 }
 
