@@ -361,6 +361,7 @@ function addCoursetoTable(){
         default : 
         break;
     }
+    console.log(probability);
     document.getElementById("#calc-result-number").innerText =  probability.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
 
