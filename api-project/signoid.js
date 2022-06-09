@@ -66,3 +66,21 @@ function printSuccessRate(){
     signoid=100*(1/(1+Math.exp(-1*percent)));
     document.getElementById("result").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
 }
+
+
+function printselectCourse2(){
+    const selectCourse2 = document.getElementById('selectCourse2').value;
+    switch(selectCourse2){
+        case 이경호/인터넷프로그래밍: document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";document.getElementById("Mon3").innerText ="이경호/인터넷프로그래밍";    // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
+        break;
+        case 이수경/이산구조: percent+=80*0.14-145*0.05+3.3*0.28-13.85+56*0.05-1*1.24;
+        break;
+        case 황성재/자료구조: percent+=100*0.14-177*0.05+3.81*0.28-13.85+70*0.05-0*1.24;
+        break;
+        case 차호정/운영체제: percent+=140*0.14-161*0.05+4.17*0.28-13.85+120*0.05-0*1.24;
+        break;
+        case 김영석/컴퓨터아키텍쳐: percent+=90*0.14 -80*0.05+4*0.28-13.85+63*0.05-0*1.24;   //김영석교수님 분반으로 설정
+        break;
+    }
+};
+
