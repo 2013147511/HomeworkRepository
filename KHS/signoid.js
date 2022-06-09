@@ -58,7 +58,7 @@ function signoidReady(){
 
 
 
-    document.getElementById("readyre").innerText = signoid+"14";
+    document.getElementById("readyre").innerText = signoidReady1+"14";
 
 }
 
