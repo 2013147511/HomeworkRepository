@@ -95,8 +95,8 @@ function printselectCourse2(){
         break;
     }
 };
-
-function addCourse(){
+document.getElementById("addCourse").addEventListener('click',addCoursetoTable);
+function addCoursetoTable(){
     const selectCourseName1 = document.getElementById('selectCourse2').value;
     
 
