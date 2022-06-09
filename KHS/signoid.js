@@ -7,8 +7,8 @@ var courseScedule = new object();
 
 
 function signoidReady(){
-
-
+    const mymajor = document.getElementById('myMajor').value;
+    document.getElementById("credits-per-semester").innerText = mymajor
 }
 
 
