@@ -363,7 +363,7 @@ function addCoursetoTable(){
         default : 
         break;
     }
-    console.log(signoid2109);
+    console.log(probability);
     var percent = 100*probability;
     document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
