@@ -34,6 +34,7 @@ var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
 
 function signoidReady(){
     signoidReady1=intercept;  //intercept를 기본으로 더합니다.
+    document.getElementById("readyre").innerText = signoidReady1+14;
     var one_one = 0;  //각 학기 수강학점
     var one_two = 0;
     var two_one = 0;
@@ -152,7 +153,7 @@ function signoidReady(){
     signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
 
-    document.getElementById("readyre").innerText = lastCredits+14;
+    
 
 }
 
