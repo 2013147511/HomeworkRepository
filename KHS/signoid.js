@@ -152,6 +152,7 @@ function signoidReady(){
 
 
     document.getElementById("readyre").innerText = signoidReady1+14;
+    console.log(signoidReady1);
 
 }
 
