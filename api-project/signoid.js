@@ -1,6 +1,8 @@
 var percent=0;
+var signoid=0;
 function initPercent(){
     percent=0;
+    signoid=0;
 }
 function printmyFullCreditsForGrad(){
     const myFullCreditsForGrad = document.getElementById('myFullCreditsForGrad').value;
@@ -61,6 +63,6 @@ function printmyLastSemesterCredits(){
 };
 
 function printSuccessRate(){
-    const signoid=100*(1/(1+Math.exp(-1*percent)));
+    signoid=100*(1/(1+Math.exp(-1*percent)));
     document.getElementById("result").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
 }
