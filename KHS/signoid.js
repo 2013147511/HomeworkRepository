@@ -31,18 +31,6 @@ var numOfMajor;  //전공자 정원
 var grad_is_NAY; //평점is NAY
 var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
 
-var one_one = 0;  //각 학기 수강학점
-var one_two = 0;
-var two_one = 0;
-var two_two = 0;
-var thr_one = 0;
-var thr_two = 0;
-var four_one =0;
-var four_two =0;
-var five_one =0;
-var five_two =0;
-var six_one = 0;
-var six_two = 0;
 
 function signoidReady(){
     signoidReady1=intercept;  //intercept를 기본으로 더합니다.
