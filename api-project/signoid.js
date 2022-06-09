@@ -74,7 +74,7 @@ function printselectCourse2(){
     selectCourseName = selectCourse2;
     
 };
-document.getElementById("addCourse").addEventListener('click',addCoursetoTable);
+
 function addCoursetoTable(){
     const selectCourseName1 = document.getElementById('selectCourse2').value;
     switch(selectCourseName1){
