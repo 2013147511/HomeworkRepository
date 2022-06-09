@@ -7,8 +7,8 @@ var courseScedule = new object();
 
 
 function signoidReady(){
-    const mymajor = document.getElementsByName('myMajor').value;
-    document.getElementById("readyre").innerText = mymajor +"11"
+    var mymajor = document.getElementsByName('myMajor');
+    document.getElementById("readyre").innerText = mymajor.options[mymajor.selectedIndex].value +"11"
 }
 
 
