@@ -142,11 +142,10 @@
             <!--구자성 변경부분 (3)-->
             <!--링크 바꾸지 않기 위해 submit을 button으로 변경-->
         <!--<input type="submit" class="button" value="완료 >"> -->
-            <input type="button" class="button" value="완료 >" onclick='signoidReady()'>
-            <div id="readyre"></div> 
+            <input type="button" class="button" value="완료 >" onclick='signoidReady()'> 
             <!--(3)여기까지-->
         </form>
-        <div id="readyre"></div>
+        
         <div id="demo"></div>
 
         <!-- 페이지 설명 -->
@@ -221,8 +220,8 @@
                 <p><label>마일리지
                     <input name="csMileage" type="number" min="0" max="36" step="1">
                 </label></p>
-                <input type="submit" value="이 과목 추가하기">
-            <!--<input type="button" value="이 과목 추가하기" onclick='addCoursetoTable()'> --> 
+            <!--<input type="submit" value="이 과목 추가하기">-->
+                <input type="button" value="이 과목 추가하기" onclick='addCoursetoTable()'>
             </form>
             <div id="#calc-result">
                 총 성공 확률 <span id="#calc-result-number"></span>%
@@ -303,7 +302,7 @@
         document.querySelector("#cs-panel-button").onclick = function(){
             document.querySelector("#cs-panel").style.display = "block";
         }
-        document.querySelector("#cs-panel input[type='submit']").onclick = function(){
+        document.querySelector("#cs-panel input[type='button']").onclick = function(){
             document.querySelector("#cs-panel").style.display = "none";
         }
         document.querySelector("#others-panel-button").onclick = function(){

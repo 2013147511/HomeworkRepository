@@ -69,7 +69,7 @@ function signoidReady(){
         signoidReady1 = signoidReady1 - 0.22;
     }
 
-
+                                                                    // 최대 12학기 다닐수 있으므로 12가 최대값이라고 가정.
     one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
     one_one *=1;   //spring to int
