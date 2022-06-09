@@ -78,39 +78,51 @@ function signoidReady(){
 
     one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
+    one_one *=1;
     if(semester>1){
     one_two = document.getElementsByName("myCreditsAcquired1_2");
     one_two = one_two[0].value;
+    one_two *=1;
     if(semester>2){
     two_one = document.getElementsByName("myCreditsAcquired2_1");
     two_one = two_one[0].value;
+    two_one *=1;
     if(semester>3){
     two_two = document.getElementsByName("myCreditsAcquired2_2");
     two_two = two_two[0].value;
+    two_two *=1;
     if(semester>4){
     thr_one = document.getElementsByName("myCreditsAcquired3_1");
     thr_one = thr_one[0].value;
+    thr_one *=1;
     if(semester>5){
     thr_two = document.getElementsByName("myCreditsAcquired3_2");
     thr_two = thr_two[0].value;
+    thr_two *=1;
     if(semester>6){
     four_one = document.getElementsByName("myCreditsAcquired4_1");
     four_one = four_one[0].value;
+    four_one *=1;
     if(semester>7){
     four_two = document.getElementsByName("myCreditsAcquired4_2");
     four_two = four_two[0].value;
+    four_two *=1;
     if(semester>8){
     five_one = document.getElementsByName("myCreditsAcquired5_1");
     five_one = five_one[0].value;
+    five_one *=1;
     if(semester>9){
     five_two = document.getElementsByName("myCreditsAcquired5_2");
     five_two = five_two[0].value;
+    five_two *=1;
     if(semester>10){
     six_one = document.getElementsByName("myCreditsAcquired6_1");
     six_one = six_one[0].value;
+    six_one *=1;
     if(semester>11){
     six_two = document.getElementsByName("myCreditsAcquired6_2");
     six_two = six_two[0].value;
+    six_two *=1;
     }}}}}}}}}}}
     totalCredits = one_one+one_two+two_one+two_two+thr_one+thr_two+four_one+four_two+five_one+five_two+six_one+six_two;
 
