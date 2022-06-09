@@ -2,6 +2,7 @@
 /*과목 숫자 표 가운데위치*/
 .wrapper {
     justify-content: center;
+    align-items: center;
   }
 
 /*여기까지 구자성 추가*/
