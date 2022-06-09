@@ -153,6 +153,7 @@ function signoidReady(){
 
 //고른 과목에 따라 시간표에 해당과목 추가, 변수계산
 function addCoursetoTable(){
+    console.log(signoidReady1);
     var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
     console.log(selectCourseName1);
