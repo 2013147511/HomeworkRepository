@@ -266,7 +266,10 @@ function csMileage(){
 
 //고른 과목에 따라 시간표에 해당과목 추가
 function addCoursetoTable(){
-    const selectCourseName1 = document.getElementById('selectCourse2').value;
+    var selectCourseName1 = document.getElementsByName("csClass");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
+    selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
+
+    document.getElementById("readyre").innerText = selectCourseName1;
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2",).innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  

@@ -204,25 +204,31 @@
                         <option value="박노성/기계학습">박노성/기계학습</option>
                         <option value="여진영/빅데이터">여진영/빅데이터</option>
                     </select>
-
+                </label></p>
          <!--(4)여기까지-->
 
-                </label></p>
-                <p><label>시간대
+         
+         <!--구자성 변경부분 (5)-->  
+         <!--시간대는 의미없으므로 제거-->
+         <!--submit 부분 button으로 변경-->         
+        
+         <!--      <p><label>시간대
                     <select name="csTimeslot">
                         <option value="월2, 수23">월2, 수23</option>
                     </select>
-                </label></p>
+                </label></p>                                                 --> 
+       
                 <p><label>마일리지
                     <input name="csMileage" type="number" min="0" max="36" step="1">
                 </label></p>
-                <input type="submit" value="이 과목 추가하기">
+            <!--<input type="submit" value="이 과목 추가하기">--> 
+                <input type="button" value="이 과목 추가하기" onclick='addCoursetoTable()'>
             </form>
             <div id="#calc-result">
                 총 성공 확률 <span id="#calc-result-number">78</span>%
             </div>
         </div>
-
+        <!--(5)여기까지-->
         <!-- 기타 과목 추가하는 panel; #others-panel -->
         <div id="others-panel">
             <form method="post" action="#">
