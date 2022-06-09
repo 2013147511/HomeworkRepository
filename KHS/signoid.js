@@ -30,7 +30,7 @@ var MajorIsIncluded = new Boolean(false);
 
 
 function signoidReady(){
-    signoidReady1+=11.63;  //intercept를 기본으로 더합니다.
+    signoidReady1=11.63;  //intercept를 기본으로 더합니다.
 
 
     var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
@@ -47,11 +47,11 @@ function signoidReady(){
     semester = document.getElementsByName("mySemesters");  //semester 에 학기수를 저장합니다.
     semester = semester[0].value;                           // 3, 4, 5학년에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
     if(semester>8){
-        signoidReady1+=12.65;
+        signoidReady1=signoidReady1 +12.65;
     }else if(semester>6){
-        signoidReady1-=1.19;
+        signoidReady1=signoidReady1 -1.19;
     }else if(semester>4){
-        signoidReady1-=0.36;
+        signoidReady1=signoidReady1 -0.36;
     }else{
         signoidReady1+=0;
     }
