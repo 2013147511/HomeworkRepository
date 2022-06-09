@@ -162,11 +162,6 @@ function signoidReady(){
     signoidReady1 = signoidReady1 + (totalCredits/gradCredits)*3.56;      //총이수학점_졸업이수학점 * 알맞은 상수를 더해줍니다.
     signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
-
-    document.getElementById("#calc-result-number").innerHTML = signoidReady1.toFixed(2);
-    document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
-    document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
-    document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
     console.log(signoidReady1);
     
 }
@@ -176,7 +171,6 @@ function addCoursetoTable(){
 
     var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
-    console.log(selectCourseName1);
     
     Mileage = document.getElementsByName("csMileage"); 
     Mileage = Mileage[0].value;
