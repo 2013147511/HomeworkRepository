@@ -1,5 +1,6 @@
 var percent=0;
 var signoid=0;
+var selectCourseName;
 function initPercent(){
     percent=0;
     signoid=0;
@@ -70,7 +71,11 @@ function printSuccessRate(){
 
 function printselectCourse2(){
     const selectCourse2 = document.getElementById('selectCourse2').value;
-    switch(selectCourse2){
+    selectCourseName = selectCourse2;
+    
+};
+function addCourse(){
+    switch(selectCourseName){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";  // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
@@ -92,5 +97,4 @@ function printselectCourse2(){
                                     document.getElementById("Thu7").innerText ="김영석/컴퓨터아키텍쳐";
         break;
     }
-};
-
+}
