@@ -41,7 +41,7 @@ function signoidReady(){
     MajorIsIncluded = false;
     }
 
-    var myFullCreditsForGrad = document.getElementsByName("myFullCreditsForGrad");
+    var myFullCreditsForGrad = document.getElementsByName("myFullCreditsForGrad")[0];
     
     document.getElementById("readyre").innerText = myFullCreditsForGrad+"14";
 
