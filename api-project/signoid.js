@@ -75,8 +75,8 @@ function printselectCourse2(){
     
 };
 function addCourse(){
-    const selectCourseName = document.getElementById('selectCourse2').value;
-    switch(selectCourseName){
+    const selectCourseName1 = document.getElementById('selectCourse2').value;
+    switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";  // 정원 / 참여인원 / 평점 / 실시간온라인여부 / 전공자정원수 / 동영상컨텐츠
