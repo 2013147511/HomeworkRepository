@@ -78,7 +78,7 @@ function signoidReady(){
 
     one_one = document.getElementsByName("myCreditsAcquired1_1");  // 학기당 이수학점을 저장하고 총 이수학점에 더합니다.
     one_one = one_one[0].value;
-    one_one *=1;
+    one_one *=1;  //spring to int
     if(semester>1){
     one_two = document.getElementsByName("myCreditsAcquired1_2");
     one_two = one_two[0].value;
@@ -129,7 +129,7 @@ function signoidReady(){
 
 
 
-    document.getElementById("readyre").innerText = totalCredits+"14";
+    document.getElementById("readyre").innerText = one_one+"14";
 
 }
 
