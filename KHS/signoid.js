@@ -152,7 +152,7 @@ function signoidReady(){
     signoidReady1 = signoidReady1 + (lastCredits/averageCredits)*0.25;   //직전학기이수학점_학기당이수학점 * 알맞은상수를 더해줍니다
 
 
-    document.getElementById("readyre").innerText = gradCredits+14;
+    document.getElementById("readyre").innerText = lastCredits+14;
 
 }
 
