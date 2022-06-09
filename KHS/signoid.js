@@ -362,11 +362,12 @@ function addCoursetoTable(){
         break;
     }
     console.log(signoid2109);
-    document.getElementById("#calc-result-number").innerText =  probability.toFixed(2);  // 총확률표시 부분에 확률 표시.
+    var percent = 100*probability;
+    document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
 
 function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 리턴해주는 함수
-    var signoidt=100*(1/(1+Math.exp((-1)*(signoidReady1+signoidReady2))));
+    var signoidt=(1/(1+Math.exp((-1)*(signoidReady1+signoidReady2))));
     console.log(signoidt);
     return signoidt;
 }
