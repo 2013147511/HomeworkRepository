@@ -33,7 +33,7 @@ function signoidReady(){
     signoidReady1+=11.63;  //intercept를 기본으로 더합니다.
 
 
-    var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꿔서 전공자로 계산합니다.
+    var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
     myMajor = myMajor[0].options[myMajor[0].selectedIndex].value;
     if(myMajor=="공과대학"){
     MajorIsIncluded = true;
@@ -41,9 +41,13 @@ function signoidReady(){
     MajorIsIncluded = false;
     }
 
-    gradCredits = document.getElementsByName("myFullCreditsForGrad");
-    
-    document.getElementById("readyre").innerText = gradCredits[0].value+"14";
+    gradCredits = document.getElementsByName("myFullCreditsForGrad");  //gradCredits 에 졸업이수학점을 저장합니다.
+    gradCredits = gradCredits[0].value;
+
+    semester = document.getElementsByName("mySemesters");  //gradCredits 에 졸업이수학점을 저장합니다.
+
+
+    document.getElementById("readyre").innerText = gradCredits+"14";
 
 }
 
