@@ -103,7 +103,7 @@ function signoidReady(){
 
 
 
-    document.getElementById("readyre").innerText = totalCredits+"14";
+    document.getElementById("readyre").innerText = one_one+"14";
 
 }
 
