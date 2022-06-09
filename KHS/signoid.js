@@ -152,7 +152,7 @@ function signoidReady(){
 function addCoursetoTable(){
     var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
-    
+    console.log(selectCourseName1);
     document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
