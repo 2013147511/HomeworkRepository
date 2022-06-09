@@ -269,8 +269,9 @@ function csMileage(){
 function addCoursetoTable(){
     var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
+    
     document.getElementById("readyre").innerText = selectCourseName1;
-    console.log(selectCourseName1);
+    
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": document.getElementById("Mon2",).innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
