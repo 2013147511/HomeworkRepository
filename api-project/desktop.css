@@ -3,6 +3,7 @@
 .wrapper {
     justify-content: center;
     align-items: center;
+    display: flex;
   }
 
 /*여기까지 구자성 추가*/
