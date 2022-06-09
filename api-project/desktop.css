@@ -1,4 +1,6 @@
-
+.g-signin2{
+    justify-content: center;
+}
 body{
     /*the entire background*/
     background-color: antiquewhite;
