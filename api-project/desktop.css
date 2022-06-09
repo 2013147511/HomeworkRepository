@@ -1,10 +1,7 @@
 /*구자성 추가 시작*/
 /*과목 숫자 표 가운데위치*/
 .wrapper {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
   }
 
 /*여기까지 구자성 추가*/
