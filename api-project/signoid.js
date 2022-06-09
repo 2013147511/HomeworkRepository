@@ -63,6 +63,7 @@ function printmyLastSemesterCredits(){
     percent+=0.25*myLastSemesterCredits;
 };
 
+//해당 과목 수강신청 성공확률 출력
 function printSuccessRate(){
     signoid=100*(1/(1+Math.exp(-1*percent)));
     document.getElementById("result").innerText ="이 과목의 수강신청성공확률은" +signoid.toFixed(2)+"%입니다";
