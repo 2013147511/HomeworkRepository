@@ -42,6 +42,44 @@ var grad_is_NAY; //평점is NAY
 var MajorIsIncluded = new Boolean(false); //전공자정원포함여부
 
 
+
+
+//지환님 카카오부분
+var userCode = 0;
+let UCA = [];
+
+function makeCode() {
+    userCode = UCA.join('');
+}
+//
+// 지환님 카카오 추가 js코드
+function sendLinkDefault() {
+    Kakao.init('9c2d3d10a2d0c8cd14dd385207763674')
+    Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+            title: '인프 시간표',
+            description: '코드: ' + userCode,
+            imageUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/95/YonseiUniversityEmblem.svg/1200px-YonseiUniversityEmblem.svg.png',
+            link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com'
+            }
+        },
+        buttons: [
+            {
+                title: '웹으로 보기',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com'
+                }
+            },
+        ]
+    })
+}
+// 여기까지 지환님 코드
+
+
 function signoidReady(){
     signoidReady1=11.63  //intercept를 기본으로 더합니다.
 
@@ -187,6 +225,7 @@ function addCoursetoTable(){
                                       document.getElementById("Wed2").style.backgroundColor = 'rgb(102, 102, 153)';
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
                                       document.getElementById("Wed3").style.backgroundColor = 'rgb(102, 102, 153)';
+                                      UCA.push("07");
                                       courseScedule.CSI2109.day=['Mon2', 'Wed2','Wed3'];
                                       courseScedule.CSI2109.professorName="이경호";
                                       courseScedule.CSI2109.courseName="인터넷프로그래밍";
@@ -429,3 +468,6 @@ function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 �
     console.log(signoidt);
     return signoidt;
 }
+
+
+
