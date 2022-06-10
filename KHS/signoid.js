@@ -182,7 +182,7 @@ function addCoursetoTable(){
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": 
                                       document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
-                                      document.getElementById("Mon2").style.backgroundColor = 'rgb(153, 153, 102)';
+                                      document.getElementById("Mon2").style.backgroundColor = 'rgb(102, 102, 153)';
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
                                       document.getElementById("Wed2").style.backgroundColor = 'rgb(153, 153, 102)';
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
