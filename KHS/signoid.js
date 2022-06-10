@@ -182,20 +182,23 @@ function addCoursetoTable(){
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": 
                                       document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
-                                      document.getElementById("Mon2").style.backgroundColor = 'rgb(204, 153, 102)';
+                                      document.getElementById("Mon2").style.backgroundColor = 'rgb(153, 153, 102)';
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
-                                      document.getElementById("Wed2").style.backgroundColor = 'rgb(204, 153, 102)';
+                                      document.getElementById("Wed2").style.backgroundColor = 'rgb(153, 153, 102)';
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
-                                      document.getElementById("Wed3").style.backgroundColor = 'rgb(204, 153, 102)';
+                                      document.getElementById("Wed3").style.backgroundColor = 'rgb(153, 153, 102)';
                                       courseScedule.CSI2109.day=['Mon2', 'Wed2','Wed3'];
                                       courseScedule.CSI2109.professorName="이경호";
                                       courseScedule.CSI2109.courseName="인터넷프로그래밍";
                                       var signoid2109 = 90*0.14 + 69*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 2.58*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+75*(-0.12)+0*(-1.42)+75*0*(0.05)+6*0*0.43;
                                       probability *=signoid(signoidReady1,signoid2109);
         break;
-        case "이수경/이산구조":      document.getElementById("Tue3").innerText ="이수경/이산구조";   
+        case "이수경/이산구조":      document.getElementById("Tue3").innerText ="이수경/이산구조";
+                                    document.getElementById("Tue3").style.backgroundColor = 'rgb(153, 153, 204)';   
                                     document.getElementById("Wed11").innerText ="이수경/이산구조";
+                                    document.getElementById("Wed11").style.backgroundColor = 'rgb(153, 153, 204)';  
                                     document.getElementById("Wed12").innerText ="이수경/이산구조";
+                                    document.getElementById("Wed12").style.backgroundColor = 'rgb(153, 153, 204)';  
                                     courseScedule.CSI2101.day=['Tue3', 'Wed11','Wed12'];
                                     courseScedule.CSI2101.professorName="이수경";
                                     courseScedule.CSI2101.courseName="이산구조";
