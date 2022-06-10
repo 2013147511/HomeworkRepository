@@ -51,8 +51,10 @@ let UCA = [];
 function makeCode() {
     userCode = UCA.join('');
 }
-//
-// 지환님 카카오 추가 js코드
+function kakaoActive() {
+    makeCode()
+    sendLinkDefault()
+}
 function sendLinkDefault() {
     Kakao.init('9c2d3d10a2d0c8cd14dd385207763674')
     Kakao.Link.sendDefault({
