@@ -180,7 +180,9 @@ function addCoursetoTable(){
     // signoidReady1 = 사전의 입력받은 변수들로 계산 가능한 signoid 부분
     // 따라서 두 변수를 더한 다음에 계산하면 된다.
     switch(selectCourseName1){
-        case "이경호/인터넷프로그래밍": document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
+        case "이경호/인터넷프로그래밍": 
+                                      document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
+                                      document.getElementById("Mon2").style.backgroundColor=blue;
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
                                       courseScedule.CSI2109.day=['Mon2', 'Wed2','Wed3'];
@@ -358,7 +360,7 @@ function addCoursetoTable(){
         break;
     }
     console.log(probability);
-    var percent = 100*probability;
+    var percent = 100*probability; 
     document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
 
