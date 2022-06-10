@@ -182,7 +182,7 @@ function addCoursetoTable(){
     switch(selectCourseName1){
         case "이경호/인터넷프로그래밍": 
                                       document.getElementById("Mon2").innerText ="이경호/인터넷프로그래밍";
-                                      document.getElementById("Mon2").style.backgroundColor=blue;
+                                      document.getElementById("Mon2").style.backgroundColor = 'blue';
                                       document.getElementById("Wed2").innerText ="이경호/인터넷프로그래밍";  
                                       document.getElementById("Wed3").innerText ="이경호/인터넷프로그래밍";
                                       courseScedule.CSI2109.day=['Mon2', 'Wed2','Wed3'];
