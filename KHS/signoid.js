@@ -17,8 +17,9 @@ var courseScedule = {
     CSI4119: {},
     CSI4120: {},
     CSI4121: {}
-}; // 시간표 객체
+} // 시간표 객체
 var probability=1;
+var tempProbability ; // 시간표에 넣기전 마일리지만 입력해도 임시로 계산할 확률값.
 var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
 var totalNumber ; // 정원
 var numofParticipants; // 참여인원
@@ -483,6 +484,91 @@ function addCoursetoTable(){
     var percent = 100*probability; 
     document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
+
+
+function ChangeProbability(){
+    tempProbability = probability;
+    var selectCourseName1 = document.getElementsByName("csClass");  
+    selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
+    
+    Mileage = document.getElementsByName("csMileage"); 
+    Mileage = Mileage[0].value;
+    Mileage *=1; //spring to int
+
+    /* signoid학정번호 = 정원*계수 + 참여인원*계수 + 1학년정원*계수 + 종별전선(boolean)*계수+종별전필(boolean)*계수+평점*계수 
+    마일리지 * 계수 + 신청과목수*계수 + 실시간온라인여부(boolean)*계수 + 동영상컨텐츠여부(boolean)*계수 + 전공자정원수*계수 +
+    평점_is_nay(boolean)*계수 + (전공자정원포함여부(boolean)*전공자정원) * 계수 + (신청과목수*평점_is_na(boolean)) * 계수 입니다. csv파일 참고  즉, 과목에 영향받는 signoid 변수 계산 부분*/
+    /* signoidReady1 = 사전의 입력받은 변수들로 계산 가능한 signoid 부분 = 졸업신청여부(boolean)*계수 + 초수강여부(boolean)*계수 + (총이수학점/졸업이수학점)*계수 + (직전학기이수학점/학기당이수학점)*계수
+    학년3(boolean)*계수 + 학년4(boolean)*계수 + 학년5(boolean)*계수 */
+    // 따라서 두 변수를 더한 다음에 계산하면 된다.
+    switch(selectCourseName1){
+        case "이인권/객체지향프로그래밍": var signoid2102 = 120*0.14 + 131*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 2.87*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 1*(-1.2)+80*(-0.12)+0*(-1.42)+80*1*(0.05)+6*0*0.43;
+        tempProbability *=signoid(signoidReady1,signoid2102);
+        break;
+        case "벅스텔러번트/컴퓨터프로그래밍": var signoid1100 = 60*0.14 + 11*(-0.05) + 55*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.73*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+60*(-0.12)+0*(-1.42)+60*0*(0.05)+6*0*0.43;
+        tempProbability *=signoid(signoidReady1,signoid1100);
+        break;
+        case "이병주/컴퓨터프로그래밍":       var signoid1100 = 60*0.14 + 5*(-0.05) + 55*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.38*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+60*(-0.12)+0*(-1.42)+60*0*(0.05)+6*0*0.43;
+        tempProbability *=signoid(signoidReady1*signoid1100);                                   
+        break;
+        case "이수경/이산구조":      var signoid2101 = 80*0.14 + 145*(-0.05) + 0*(-0.33)+0*(-1.57) +0*(-2.33)+ 3.3*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 1*(-1.2)+56*(-0.12)+0*(-1.42)+56*0*(0.05)+6*0*0.43;
+        tempProbability *=signoid(signoidReady1,signoid2101);
+        break;
+        case "황성재/자료구조":  var signoid2103 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*0*(0.05)+6*1*0.43;
+        tempProbability*=signoid(signoidReady1,signoid2103);
+        break;
+        case "최종현/컴퓨터과학입문":     var signoid2106 = 60*0.14 + 152*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+36*(-0.12)+1*(-1.42)+36*1*(0.05)+6*1*0.43;
+        tempProbability*=signoid(signoidReady1,signoid2106);
+        break;
+        case "이경호/인터넷프로그래밍": var signoid2109 = 90*0.14 + 69*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 2.58*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+75*(-0.12)+0*(-1.42)+75*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid2109);
+        break;
+        case "차호정/운영체제":         var signoid3101 = 140*0.14 + 161*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 4.17*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+120*(-0.12)+0*(-1.42)+120*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid3101);
+        break;
+        case "김영석/컴퓨터아키텍쳐":   var signoid3102 = 90*0.14 + 80*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 4.1*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+63*(-0.12)+0*(-1.42)+63*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid3102);
+        break;
+        case "이경우/컴퓨터아키텍쳐":    var signoid3102 = 90*0.14 + 79*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 4*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+63*(-0.12)+0*(-1.42)+63*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid3102);
+        break;
+        case "이인권/컴퓨터그래픽스":     var signoid4105 = 120*0.14 + 113*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.24*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 1*(-1.2)+90*(-0.12)+0*(-1.42)+90*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4105);
+        break;
+        case "조성배/인공지능":          var signoid4108 = 100*0.14 + 75*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+90*(-0.12)+1*(-1.42)+90*0*(0.05)+6*1*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4108);
+        break;
+        case "소프트웨어종합설계":       var signoid4101 = 10*0.14 + 17*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+0*(-0.12)+1*(-1.42)+0*1*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4101);
+        break;
+        case "송도경/정보보호":          var signoid4109 = 80*0.14 + 56*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.75*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+64*(-0.12)+0*(-1.42)+64*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4109);
+        break;
+        case "김선주/컴퓨터비전":         var signoid4106 = 100*0.14 + 144*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.59*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+80*(-0.12)+0*(-1.42)+80*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4106);
+        break;
+        case "조성배/데이타마이닝":        var signoid4117 = 50*0.14 + 29*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 2.12*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+35*(-0.12)+0*(-1.42)+35*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4117);
+        break;
+        case "이진호/멀티코어및GPU프로그래밍":       var signoid4119 = 80*0.14 + 91*(-0.05) + 0*(-0.33)+1*(-1.57) +5*(-2.33)+ 0*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+64*(-0.12)+0*(-1.42)+64*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4119);
+
+        break;
+        case "박노성/기계학습":          var signoid4120 = 90*0.14 + 89*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 3.14*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+72*(-0.12)+0*(-1.42)+72*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4120);
+        break;
+        case "여진영/빅데이터":          var signoid4121 = 60*0.14 + 80*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 0*(-1.2)+54*(-0.12)+0*(-1.42)+54*0*(0.05)+6*0*0.43;
+        tempProbability*=signoid(signoidReady1,signoid4121);
+        break;
+        default : 
+        break;
+    }
+    console.log(tempProbability);
+    var percent = 100*tempProbability; 
+    document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
+};
+
+
 
 function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 리턴해주는 함수
     var signoidt=(1/(1+Math.exp((-1)*(signoidReady1+signoidReady2))));
