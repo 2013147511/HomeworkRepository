@@ -100,7 +100,7 @@ function signoidReady(){
 
     var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
     myMajor = myMajor[0].options[myMajor[0].selectedIndex].value;
-    if(myMajor=="공과대학"){
+    if(myMajor=="인공지능융합대학"){
     MajorIsIncluded = true;
     }else{
     MajorIsIncluded = false;
