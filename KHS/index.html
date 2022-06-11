@@ -22,7 +22,7 @@
             /* #cs-panel, #others-panel styles */
             #cs-panel {
                 background-color:  rgb(225, 214, 201); /*change*/
-                visibility: hidden;
+                display : none;
                 position: fixed;
                 width: 100%;
                 height: 40em;/*change*/
@@ -304,11 +304,11 @@
         // 코드 끝
         */
         document.querySelector("#cs-panel-button").onclick = function(){
-            document.querySelector("#cs-panel").style.visibility = "visible";
+            document.querySelector("#cs-panel").style.display = "block";
         }
         document.querySelector("#cs-panel input[type='button']").onclick = function(){
             addCoursetoTable();
-            document.querySelector("#cs-panel").style.visibility = "hidden";
+            document.querySelector("#cs-panel").style.display = "none";
         }
         document.querySelector("#others-panel-button").onclick = function(){
             document.querySelector("#others-panel").style.display = "block";
