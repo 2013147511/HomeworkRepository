@@ -213,7 +213,8 @@
 
          <!--구자성 변경부분 (5)-->  
          <!--시간대는 의미없으므로 제거-->
-         <!--submit 부분 button으로 변경-->         
+         <!--submit 부분 button으로 변경--> 
+         <!--diplay:none 인 의미없는 텍스트 입력칸을 추가함으로써 엔터키 입력시 화면 초기화 방지-->        
         
          <!--      <p><label>시간대
                     <select name="csTimeslot">
@@ -223,7 +224,7 @@
        
                 <p><label>마일리지
                     <input name="csMileage" type="number" min="0" max="36" step="1" onchange='ChangeProbability()' >
-                    <input type="text" name="aaa" style="display:none;">
+                    <input type="text" name="aaa" style="display:none;">  
                 </label></p>
             <!--<input type="submit" value="이 과목 추가하기">-->
                 <input type="button" class="button" value="이 과목 추가하기" onclick='addCoursetoTable()'>
