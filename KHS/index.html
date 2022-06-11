@@ -176,7 +176,7 @@
         </table>
 
         <!-- 하단 버튼 2개 -->
-        <button id="cs-panel-button">컴퓨터과학과 전공 과목 추가</button>
+        <button id="cs-panel-button" onclick='addconsold()'>컴퓨터과학과 전공 과목 추가</button>
         <button id="others-panel-button">기타 과목 추가</button>
 
         <!-- 컴퓨터과학과 전공 과목 추가하는 panel; #cs-panel -->
@@ -304,16 +304,16 @@
         // 코드 끝
         */
         document.querySelector("#cs-panel-button").onclick = function(){
-            document.querySelector("#cs-panel").style.display = "block";
+            document.querySelector("#cs-panel").style.visibility = "visible";
         }
         document.querySelector("#cs-panel input[type='button']").onclick = function(){
-            document.querySelector("#cs-panel").style.display = "none";
+            document.querySelector("#cs-panel").style.visibility = "hidden";
         }
         document.querySelector("#others-panel-button").onclick = function(){
-            document.querySelector("#others-panel").style.display = "block";
+            document.querySelector("#others-panel").style.visibility = "visible";
         }
         document.querySelector("#others-panel input[type='submit']").onclick = function(){
-            document.querySelector("#others-panel").style.display = "none";
+            document.querySelector("#others-panel").style.visibility = "hidden";
         }
         // 여기까지(6)
 
