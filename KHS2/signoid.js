@@ -662,14 +662,14 @@ function ChangeProbability(){
 };
 
 function addOtherCoursetoTable(){
-    var CourseName2 = document.getElementsByName("othersClassName").value;
+    var CourseName2 = document.getElementsByName("othersClassName")[0].value;
     /*CourseName2 = CourseName2[0].options[CourseName2[0].selectedIndex].value;*/
     console.log(CourseName2)
     var CourseDay2 = document.getElementsByName("othersDayslot");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
     CourseDay2 = CourseDay2[0].options[CourseDay2[0].selectedIndex].value;
     console.log(CourseDay2)
-    var CourseTime2 = document.getElementsByName("othersTimeslot");
-    CourseTime2 = CourseTime2[0].options[CourseTime2[0].selectedIndex].value;
+    var CourseTime2 = document.getElementsByName("othersTimeslot")[0].value;
+    /*CourseTime2 = CourseTime2[0].options[CourseTime2[0].selectedIndex].value; */
     console.log(CourseTime2)
 
 
