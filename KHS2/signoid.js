@@ -671,5 +671,57 @@ function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 �
     return signoidt;
 }
 
+function decipher() {
+    const iCode = document.getElementById("cCode").value;
+    const temp = iCode.length / 2;
+    let count = 0;
+    for (var i = 0; i < temp; i++) {
+        let temp2 = iCode.slice(count, count + 2);
+        findFunct(temp2);
+        count += 2;
+    }
+}
+
+function findFunct(numI) {
+    if (numI == "01") {
+        add01();
+    } else if (numI == "02") {
+        add02();
+    } else if (numI == "03") {
+        add03();
+    } else if (numI == "04") {
+        add04();
+    } else if (numI == "05") {
+        add05();
+    } else if (numI == "06") {
+        add06();
+    } else if (numI == "07") {
+        add07();
+    } else if (numI == "08") {
+        add08();
+    } else if (numI == "09") {
+        add09();
+    } else if (numI == "10") {
+        add10();
+    } else if (numI == "11") {
+        add11();
+    } else if (numI == "12") {
+        add12();
+    } else if (numI == "13") {
+        add13();
+    } else if (numI == "14") {
+        add14();
+    } else if (numI == "15") {
+        add15();
+    } else if (numI == "16") {
+        add16();
+    } else if (numI == "17") {
+        add17();
+    } else if (numI == "18") {
+        add18();
+    } else {
+        add19();
+    }
+}
 
 
