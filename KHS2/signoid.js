@@ -662,6 +662,9 @@ function ChangeProbability(){
 };
 
 function addOtherCoursetoTable(){
+    var CourseProf2 = document.getElementsByName("othersProfessor")[0].value;
+    /*CourseName2 = CourseName2[0].options[CourseName2[0].selectedIndex].value;*/
+    console.log(CourseProf2)
     var CourseName2 = document.getElementsByName("othersClassName")[0].value;
     /*CourseName2 = CourseName2[0].options[CourseName2[0].selectedIndex].value;*/
     console.log(CourseName2)
@@ -690,7 +693,7 @@ function addOtherCoursetoTable(){
     console.log(CourseTime2)
     var timeId = CourseDayEng+CourseTime2;
     console.log(timeId)
-
+    document.getElementById(timeId).innerText = CourseProf2 + "/" + CourseName2;
 
 
 }
