@@ -694,6 +694,7 @@ function addOtherCoursetoTable(){
     var timeId = CourseDayEng+CourseTime2;
     console.log(timeId)
     document.getElementById(timeId).innerText = CourseProf2 + "/" + CourseName2;
+    document.getElementById(timeId).style.backgroundColor = 'rgb(102, 051, 204)';
 
 
 }
