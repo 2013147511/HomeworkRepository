@@ -671,6 +671,8 @@ function addOtherCoursetoTable(){
     var CourseTime2 = document.getElementsByName("othersTimeslot")[0].value;
     /*CourseTime2 = CourseTime2[0].options[CourseTime2[0].selectedIndex].value; */
     console.log(CourseTime2)
+    var timeId = CourseDay2+CourseTime2;
+    console.log(timeId)
 
 
 
