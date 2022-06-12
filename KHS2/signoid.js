@@ -82,11 +82,11 @@ function sendLinkDefault() {
 }
 // 여기까지 지환님 코드
 
-
+// index.html 에서 내정보- 완료> 버튼이 눌릴 경우 호출되는 함수 입니다.
 function signoidReady(){
-    signoidReady1=11.63  //intercept를 기본으로 더합니다.
+    signoidReady1=11.63  //기본 상수값인 intercept를더합니다.
 
-    var one_one = 0;  //각 학기 수강학점
+    var one_one = 0;  //각 학기 수강학점  EX) four_two = 4학년 2학기 수강학점
     var one_two = 0;
     var two_one = 0;
     var two_two = 0;
@@ -99,7 +99,7 @@ function signoidReady(){
     var six_one = 0;
     var six_two = 0;
 
-    var myMajor = document.getElementsByName("myMajor");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
+    var myMajor = document.getElementsByName("myMajor");  // 단과대가 인공지능융합대학이면 MajorIsIncluded 를 true로 바꾸고 인공지능융합대학이아니면 그대로 false값을 가집니다.
     myMajor = myMajor[0].options[myMajor[0].selectedIndex].value;
     if(myMajor=="인공지능융합대학"){
     MajorIsIncluded = true;
@@ -114,7 +114,7 @@ function signoidReady(){
     semester = document.getElementsByName("mySemesters");  //semester 에 학기수를 저장합니다.
     semester = semester[0].value;     
     semester *=1;       //spring to int                  
-    if(semester>=8){                    // 3, 4, 5학년에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
+    if(semester>=8){                    // 3, 4, 5학년 여부 에 따라 signoidReady1값에 알맞은 상수를 더해줍니다.
         signoidReady1=signoidReady1 +12.65;
     }else if(semester>=6){
         signoidReady1=signoidReady1 -1.19;
@@ -208,12 +208,13 @@ function signoidReady(){
 }
 
 //고른 과목에 따라 시간표에 해당과목 추가, 변수계산
+// 컴퓨터과학과 과목추가 패널에서 이 과목추가하기 버튼 을 누를경우 호출되는 함수입니다.
 function addCoursetoTable() {
 
-    var selectCourseName1 = document.getElementsByName("csClass");
-    selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
+    var selectCourseName1 = document.getElementsByName("csClass");     //csClass 에서 선택되어있는 과목명을 저장합니다.
+    selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value; 
 
-    Mileage = document.getElementsByName("csMileage");
+    Mileage = document.getElementsByName("csMileage");   // csMileage에서 입력된 마일리지를 저장합니다.
     Mileage = Mileage[0].value;
     Mileage *= 1; //spring to int
 
@@ -289,17 +290,18 @@ function addCoursetoTable() {
     document.getElementById("#calc-result-number").innerText = percent.toFixed(2); // 총확률표시 부분에 확률 표시.
 };
 
+//각 선택된 강의에 따라 시간표에 입력하고, 확률을 계산해주는 함수들입니다.
 function add01() {
-    document.getElementById("Tue8").innerText = "이인권/객체지향프로그래밍";
+    document.getElementById("Tue8").innerText = "이인권/객체지향프로그래밍";    // 각 시간표 셀에 교수명/강의이름을 입력 후 색을 칠하는 부분
     document.getElementById("Tue8").style.backgroundColor = 'rgb(102, 102, 255)';
     document.getElementById("Tue9").innerText = "이인권/객체지향프로그래밍";
     document.getElementById("Tue9").style.backgroundColor = 'rgb(102, 102, 255)';
     document.getElementById("Thu11").innerText = "이인권/객체지향프로그래밍";
     document.getElementById("Thu11").style.backgroundColor = 'rgb(102, 102, 255)';
     UCA.push("01");
-    courseScedule.CSI2102.day = ['Tue8', 'Tue9', 'Thu11'];
+    courseScedule.CSI2102.day = ['Tue8', 'Tue9', 'Thu11'];    //오브젝트에 강의의 시간, 교수명, 강의명을 입력합니다.
     courseScedule.CSI2102.professorName = "이인권";
-    courseScedule.CSI2102.courseName = "객체지향프로그래밍";
+    courseScedule.CSI2102.courseName = "객체지향프로그래밍";       // sinoid[학정번호] = 강의에 따라 달라지는 변수값들을 사용한 signoid 값들을 계산하여 저장한 변수입니다.
     var signoid2102 = 120 * 0.14 + 131 * (-0.05) + 0 * (-0.33) + 0 * (-1.57) + 1 * (-2.33) + 2.87 * 0.28 + Mileage * 0.11 + 6 * (-0.15) + 1 * (-13.8) + 1 * (-1.2) + 80 * (-0.12) + 0 * (-1.42) + 80 * 1 * (0.05) + 6 * 0 * 0.43;
     probability *= signoid(signoidReady1, signoid2102);
 }
@@ -578,13 +580,13 @@ function add19() {
     probability *= signoid(signoidReady1, signoid4121);
 }
 
-
+// 시간표에 올리기 전, 입력된 마일리지가 변할때마다 따라 ( 이전까지 선택된 강의들을 수강신청 성공할 확률)* (지금 강의가 해당마일리지로 수강신청할 경우 성공확률)을 "총 성공확률"에 입력해주는 함수입니다.  
 function ChangeProbability(){
-    tempProbability = probability;
+    tempProbability = probability;   // 현재 선택된 강의를 저장합니다.
     var selectCourseName1 = document.getElementsByName("csClass");  
     selectCourseName1 = selectCourseName1[0].options[selectCourseName1[0].selectedIndex].value;
     
-    Mileage = document.getElementsByName("csMileage"); 
+    Mileage = document.getElementsByName("csMileage");   // 현재 입력된 마일리지를 저장합니다.
     Mileage = Mileage[0].value;
     Mileage *=1; //spring to int
 
@@ -593,8 +595,8 @@ function ChangeProbability(){
     평점_is_nay(boolean)*계수 + (전공자정원포함여부(boolean)*전공자정원) * 계수 + (신청과목수*평점_is_na(boolean)) * 계수 입니다. csv파일 참고  즉, 과목에 영향받는 signoid 변수 계산 부분*/
     /* signoidReady1 = 사전의 입력받은 변수들로 계산 가능한 signoid 부분 = 졸업신청여부(boolean)*계수 + 초수강여부(boolean)*계수 + (총이수학점/졸업이수학점)*계수 + (직전학기이수학점/학기당이수학점)*계수
     학년3(boolean)*계수 + 학년4(boolean)*계수 + 학년5(boolean)*계수 */
-    // 따라서 두 변수를 더한 다음에 계산하면 된다.
-    switch(selectCourseName1){
+    // 따라서 두 변수를 더한 다음에 계산하면 됩니다.
+    switch(selectCourseName1){    // 각 선택된 강의에따라 signoid학정번호를 계산하고, 임시 총 확률을 계산합니다.
         case "이인권/객체지향프로그래밍": var signoid2102 = 120*0.14 + 131*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 2.87*0.28 + Mileage*0.11 + 6 * (-0.15) + 1*(-13.8) + 1*(-1.2)+80*(-0.12)+0*(-1.42)+80*1*(0.05)+6*0*0.43;
         tempProbability *=signoid(signoidReady1,signoid2102);
         break;
@@ -658,20 +660,21 @@ function ChangeProbability(){
     }
     console.log(tempProbability);
     var percent = 100*tempProbability; 
-    document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
+    document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 소숫점 둘째자리까지 확률을 표시합니다.
 };
 
+//컴과과목이 아닌 강의를 입력할때 사용하는 함수입니다. 기타과목추가- 이과목추가하기 버튼을 누를 시 호출됩니다.
 function addOtherCoursetoTable(){
-    var CourseProf2 = document.getElementsByName("othersProfessor")[0].value;
+    var CourseProf2 = document.getElementsByName("othersProfessor")[0].value;    // 교수명을 저장합니다.
     /*CourseName2 = CourseName2[0].options[CourseName2[0].selectedIndex].value;*/
     console.log(CourseProf2)
-    var CourseName2 = document.getElementsByName("othersClassName")[0].value;
+    var CourseName2 = document.getElementsByName("othersClassName")[0].value;   // 강의명을 저장합니다.
     /*CourseName2 = CourseName2[0].options[CourseName2[0].selectedIndex].value;*/
     console.log(CourseName2)
-    var CourseDay2 = document.getElementsByName("othersDayslot");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
+    var CourseDay2 = document.getElementsByName("othersDayslot");    // 강의 요일을 저장합니다.
     CourseDay2 = CourseDay2[0].options[CourseDay2[0].selectedIndex].value;
     console.log(CourseDay2)
-    switch(CourseDay2){
+    switch(CourseDay2){                               //시간표에 입력하기위해 강의요일 별로 요일 id를 따로 저장합니다.
         case "월" : var CourseDayEng = "Mon";
         break;
         case "화" : var CourseDayEng = "Tue";
@@ -688,18 +691,18 @@ function addOtherCoursetoTable(){
         break;
 
     }
-    var CourseTime2 = document.getElementsByName("othersTimeslot")[0].value;
+    var CourseTime2 = document.getElementsByName("othersTimeslot")[0].value;  // 강의 시간을 저장합니다.
     /*CourseTime2 = CourseTime2[0].options[CourseTime2[0].selectedIndex].value; */
     console.log(CourseTime2)
-    var timeId = CourseDayEng+CourseTime2;
+    var timeId = CourseDayEng+CourseTime2;      // 시간표에 입력하기 위해 요일id+시간id를 합쳐 시간표에 있는 id와 같도록 설정합니다.
     console.log(timeId)
-    document.getElementById(timeId).innerText = CourseProf2 + "/" + CourseName2;
+    document.getElementById(timeId).innerText = CourseProf2 + "/" + CourseName2;    // 선택된 시간표 쉘에 교수명/강의명 형태로 입력후 정해진 색을 칠합니다.
     document.getElementById(timeId).style.backgroundColor = 'rgb(102, 051, 204)';
 
 
 }
 
-function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 리턴해주는 함수
+function signoid(signoidrReady1,signoidReady2){       //앞에서 설명된 두 변수를 더해 최종 시그노이드 값을 리턴해주는 함수입니다.
     var signoidt=(1/(1+Math.exp((-1)*(signoidReady1+signoidReady2))));
     console.log(signoidReady1);
     console.log(signoidReady2);
