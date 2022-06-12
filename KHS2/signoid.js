@@ -668,10 +668,27 @@ function addOtherCoursetoTable(){
     var CourseDay2 = document.getElementsByName("othersDayslot");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
     CourseDay2 = CourseDay2[0].options[CourseDay2[0].selectedIndex].value;
     console.log(CourseDay2)
+    switch(CourseDay2){
+        case "월" : var CourseDayEng = "Mon";
+        break;
+        case "화" : var CourseDayEng = "Tue";
+        break;
+        case "수" : var CourseDayEng = "Wed";
+        break;
+        case "목" : var CourseDayEng = "Thu";
+        break;
+        case "금" : var CourseDayEng = "Fri";
+        break;
+        case "토" : var CourseDayEng = "Sat";
+        break;
+        case "일" : var CourseDayEng = "Sun";
+        break;
+
+    }
     var CourseTime2 = document.getElementsByName("othersTimeslot")[0].value;
     /*CourseTime2 = CourseTime2[0].options[CourseTime2[0].selectedIndex].value; */
     console.log(CourseTime2)
-    var timeId = CourseDay2+CourseTime2;
+    var timeId = CourseDayEng+CourseTime2;
     console.log(timeId)
 
 
