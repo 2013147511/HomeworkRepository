@@ -22,7 +22,7 @@
             /* #cs-panel, #others-panel styles */
             #cs-panel {
                 background-color:  rgb(225, 214, 201); /*change*/
-                display: none;
+                display : none;
                 position: fixed;
                 width: 100%;
                 height: 40em;/*change*/
@@ -48,8 +48,10 @@
         <meta name="google-signin-client_id" content="570379180403-ajdf8apkn7cof1ch0gq8h7jl13v3jfhp.apps.googleusercontent.com">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+        <!--지환씨 카카오부분-->
+        <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
         <!--sinoid.js참조 추가-->
-        <script type="text/javascript" src="signoid.js"></script>
+       
         <!--(1)여기까지-->
 
     </head>
@@ -63,12 +65,16 @@
         </header>
 
         <!-- 내비게이션 사이드 섹션 -->
+        
         <!--구자성 변경부분 (2)-->
+        <!-- <input id= ~ 구글캘린더 연동"> 부분 주석처리 후 구글 로그인 버튼 추가-->
+        <!-- 카카오 버튼으로 변경-->
         <nav>
             <ul>
                 <div class="g-signin2" style="display:inline;" data-width="340" data-height="60"  data-onsuccess="onSignIn" data-theme="dark"></div>
+                <input id="share-kakao" type="button" onClick="kakaoActive();" value="카카오톡으로 공유" />
             <!--<input id="integrate-googleCal" type="button" onclick="" value="구글 캘린더 연동">-->
-                <input id="share-kakao" type="button" onClick="" value="카카오톡으로 공유" />
+            <!--<input id="share-kakao" type="button" onClick="" value="카카오톡으로 공유" /> -->
             </ul>
         </nav>
         <!--구글로그인 스크립트 추가-->
@@ -96,8 +102,10 @@
 
         <!-- 과거 추가했던 과목들 코드 리스트 입력받는 form -->
         <form action="#">
-            <input type="text" name="classCodesList" placeholder="형식 예시: 2,3,18">
-            <input type="submit" class="button" value="완료 >"> <!--change-->
+            <input type="text" name="classCodesList" id="cCode" placeholder="형식 예시: 2,3,18">
+            <input type="submit" class="button" onclick="decipher();" value="완료 >">
+            <!--change--> 
+            <!--6월12일 지환님 수정-->
         </form>
 
         <!-- 페이지 설명 -->
@@ -140,11 +148,10 @@
             <!--구자성 변경부분 (3)-->
             <!--링크 바꾸지 않기 위해 submit을 button으로 변경-->
         <!--<input type="submit" class="button" value="완료 >"> -->
-            <input type="button" class="button" value="완료 >" onclick='signoidReady()'>
-            <div id="readyre"></div> 
+            <input type="button" class="button" value="완료 >" onclick='signoidReady()'> 
             <!--(3)여기까지-->
         </form>
-        <div id="readyre"></div>
+        
         <div id="demo"></div>
 
         <!-- 페이지 설명 -->
@@ -174,10 +181,10 @@
         <button id="cs-panel-button">컴퓨터과학과 전공 과목 추가</button>
         <button id="others-panel-button">기타 과목 추가</button>
 
+        <!-- 컴퓨터과학과 전공 과목 추가하는 panel; #cs-panel -->
 
         <!--구자성 변경부분 (4)-->
         <!--과목 목록 추가-->
-        <!-- 컴퓨터과학과 전공 과목 추가하는 panel; #cs-panel -->
         <div id="cs-panel">
             <form method="post" action="#">
                 <p><label>교수/과목명
@@ -203,26 +210,29 @@
                         <option value="여진영/빅데이터">여진영/빅데이터</option>
                     </select>
                 </label></p>
-                 <!--(4)여기까지-->
+         <!--(4)여기까지-->
 
 
          <!--구자성 변경부분 (5)-->  
          <!--시간대는 의미없으므로 제거-->
-         <!--submit 부분 button으로 변경-->
+         <!--submit 부분 button으로 변경--> 
+         <!--diplay:none 인 의미없는 텍스트 입력칸을 추가함으로써 엔터키 입력시 화면 초기화 방지-->        
+        
          <!--      <p><label>시간대
                     <select name="csTimeslot">
                         <option value="월2, 수23">월2, 수23</option>
                     </select>
-                </label></p> --> 
+                </label></p>                                                 --> 
+       
                 <p><label>마일리지
-                    <input name="csMileage" type="number" min="0" max="36" step="1">
+                    <input name="csMileage" type="number" min="0" max="36" step="1" onchange='ChangeProbability()' >
+                    <input type="text" name="aaa" style="display:none;">  
                 </label></p>
-                <input type="submit" value="이 과목 추가하기">
-            <!--<input type="button" value="이 과목 추가하기" onclick='addCoursetoTable()'> -->
-                
+            <!--<input type="submit" value="이 과목 추가하기">-->
+                <input type="button" class="button" value="이 과목 추가하기" onclick='addCoursetoTable()'>
             </form>
             <div id="#calc-result">
-                총 성공 확률 <span id="#calc-result-number">78</span>%
+                총 성공 확률 <span id="#calc-result-number"></span>%
             </div>
         </div>
         <!--(5)여기까지-->
@@ -238,7 +248,7 @@
                 <p><label>시간
                     <input name="othersTimeslot" type="number">
                 </label></p>
-                <input type="submit" value="이 과목 추가하기">
+                <input type="button" value="이 과목 추가하기">
             </form>
         </div>
     </body>
@@ -278,10 +288,12 @@
         }
         // 코드 끝
 
-
-
+        // 구자성 변경부분 (6)
+        // (5) 에서 submit을 button으로 변경하여 이쪽 또한 변경
         // #cs-panel과 #others-panel을 버튼 onclick 이벤트 발생에 따라 보이거나 숨기게 해주는 코드
+        /* 6월 11일 추가 수정. cs-panel 을 none으로 바꾸기전에 addCourseTable() 펑션을 불러오도록 추가.
         // 이도엽 작성
+        /*
         document.querySelector("#cs-panel-button").onclick = function(){
             document.querySelector("#cs-panel").style.display = "block";
         }
@@ -295,12 +307,45 @@
             document.querySelector("#others-panel").style.display = "none";
         }
         // 코드 끝
+        */
+        document.querySelector("#cs-panel-button").onclick = function(){
+            document.querySelector("#cs-panel").style.display = "block";
+        }
+        document.querySelector("#cs-panel input[type='button']").onclick = function(){
+            addCoursetoTable();
+            document.querySelector("#cs-panel").style.display = "none";
+        }
+        document.querySelector("#others-panel-button").onclick = function(){
+            document.querySelector("#others-panel").style.display = "block";
+        }
+        document.querySelector("#others-panel input[type='button']").onclick = function(){
+            document.querySelector("#others-panel").style.display = "none";
+        }
+        // 여기까지(6)
 
-
-
+        
+        // 구자성 변경부분 (7)
+        // 강의를 테이블에 넣기 위해 각 항에 id 추가.
         // #timetable 테이블의 24개 row를 자동으로 생성해주는 코드
         // 이도엽 작성
         const hrsInDay = 24;
+        var result = "";
+        for(let i = 0; i < hrsInDay; i++) {
+            let x = `
+            <tr>
+                <th style = "border: 4px solid; border-color : rgb(187, 187, 187)">${i}-${i + 1}</th> 
+                <td id = "Mon${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Tue${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Wed${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Thu${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Fri${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Sat${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+                <td id = "Sun${i}" style = "border: 4px solid; border-color : rgb(187, 187, 187)"></td>
+            </tr>`; //change
+            result += x;
+        }
+        document.querySelector("#timetable tbody").innerHTML = result;
+        /*const hrsInDay = 24;
         var result = "";
         for(let i = 0; i < hrsInDay; i++) {
             let x = `
@@ -317,9 +362,11 @@
             result += x;
         }
         document.querySelector("#timetable tbody").innerHTML = result;
+        */
         // 코드 끝
 
-
+        // 여기까지(7)
         
     </script>
+    <script type="text/javascript" src="signoid.js"></script>
 </html>
