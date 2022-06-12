@@ -661,7 +661,20 @@ function ChangeProbability(){
     document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 확률 표시.
 };
 
+function addOtherCoursetoTable(){
+    var CourseName2 = document.getElementsByName("othersClassName").value;
+    /*CourseName2 = CourseName2[0].options[CourseName2[0].selectedIndex].value;*/
+    console.log(CourseName2)
+    var CourseDay2 = document.getElementsByName("othersDayslot");  // 단과대가 공과대학이면 MajorIsIncluded 를 true로 바꾸고 공과대학이아니면 그대로 false값을 가집니다.
+    CourseDay2 = CourseDay2[0].options[CourseDay2[0].selectedIndex].value;
+    console.log(CourseDay2)
+    var CourseTime2 = document.getElementsByName("othersTimeslot");
+    CourseTime2 = CourseTime2[0].options[CourseTime2[0].selectedIndex].value;
+    console.log(CourseTime2)
 
+
+
+}
 
 function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 리턴해주는 함수
     var signoidt=(1/(1+Math.exp((-1)*(signoidReady1+signoidReady2))));
@@ -670,6 +683,8 @@ function signoid(signoidrReady1,signoidReady2){       //시그노이드 값을 �
     console.log(signoidt);
     return signoidt;
 }
+
+
 
 function decipher() {
     const iCode = document.getElementById("cCode").value;

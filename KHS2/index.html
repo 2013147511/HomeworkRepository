@@ -245,6 +245,17 @@
                 <p><label>과목명
                     <input name="othersClassName" type="text">
                 </label></p>
+                <p><labeld>요일명
+                    <select name="othersDayslot" type="text">
+                        <option value="월">월</option>
+                        <option value="화">화</option>
+                        <option value="수">수</option>
+                        <option value="목">목</option>
+                        <option value="금">금</option>
+                        <option value="토">토</option>
+                        <option value="일">일</option>
+                    </select>
+                </label></p>
                 <p><label>시간
                     <input name="othersTimeslot" type="number">
                 </label></p>
@@ -319,6 +330,7 @@
             document.querySelector("#others-panel").style.display = "block";
         }
         document.querySelector("#others-panel input[type='button']").onclick = function(){
+            addOtherCoursetoTable();
             document.querySelector("#others-panel").style.display = "none";
         }
         // 여기까지(6)
