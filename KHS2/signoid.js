@@ -19,6 +19,7 @@ var courseScedule = {
     CSI4121: {}
 } // 시간표 객체
 var probability=1;
+var presentCourseProb ; // 현재 선택한 과목에 대한 확률값
 var tempProbability ; // 시간표에 넣기전 마일리지만 입력해도 임시로 계산할 확률값.
 var signoidReady1=0; //내 정보에서 받아서 계산가능한 값만 더할 변수
 var totalNumber ; // 정원
@@ -598,68 +599,88 @@ function ChangeProbability(){
     // 따라서 두 변수를 더한 다음에 계산하면 됩니다.
     switch(selectCourseName1){    // 각 선택된 강의에따라 signoid학정번호를 계산하고, 임시 총 확률을 계산합니다.
         case "이인권/객체지향프로그래밍": var signoid2102 = 120*0.14 + 131*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 2.87*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 1*(-1.2)+80*(-0.12)+0*(-1.42)+80*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid2102);
         tempProbability *=signoid(signoidReady1,signoid2102);
         break;
         case "벅스텔러번트/컴퓨터프로그래밍": var signoid1100 = 60*0.14 + 11*(-0.05) + 55*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.73*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+60*(-0.12)+0*(-1.42)+60*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid1100);
         tempProbability *=signoid(signoidReady1,signoid1100);
         break;
         case "이병주/컴퓨터프로그래밍":       var signoid1100 = 60*0.14 + 5*(-0.05) + 55*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.38*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+60*(-0.12)+0*(-1.42)+60*1*(0.05)+6*0*0.43;
         tempProbability *=signoid(signoidReady1*signoid1100);                                   
         break;
         case "이수경/이산구조":      var signoid2101 = 80*0.14 + 145*(-0.05) + 0*(-0.33)+0*(-1.57) +0*(-2.33)+ 3.3*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 1*(-1.2)+56*(-0.12)+0*(-1.42)+56*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid2101);
         tempProbability *=signoid(signoidReady1,signoid2101);
         break;
         case "황성재/자료구조":  var signoid2103 = 100*0.14 + 177*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+70*(-0.12)+1*(-1.42)+70*1*(0.05)+6*1*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid2103);
         tempProbability*=signoid(signoidReady1,signoid2103);
         break;
         case "최종현/컴퓨터과학입문":     var signoid2106 = 60*0.14 + 152*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+36*(-0.12)+1*(-1.42)+36*1*(0.05)+6*1*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid2106);
         tempProbability*=signoid(signoidReady1,signoid2106);
         break;
         case "이경호/인터넷프로그래밍": var signoid2109 = 90*0.14 + 69*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 2.58*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+75*(-0.12)+0*(-1.42)+75*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid2109);
         tempProbability*=signoid(signoidReady1,signoid2109);
         break;
         case "차호정/운영체제":         var signoid3101 = 140*0.14 + 161*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 4.17*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+120*(-0.12)+0*(-1.42)+120*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid3101);
         tempProbability*=signoid(signoidReady1,signoid3101);
         break;
         case "김영석/컴퓨터아키텍쳐":   var signoid3102 = 90*0.14 + 80*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 4.1*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+63*(-0.12)+0*(-1.42)+63*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid3102);
         tempProbability*=signoid(signoidReady1,signoid3102);
         break;
         case "이경우/컴퓨터아키텍쳐":    var signoid3102 = 90*0.14 + 79*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 4*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+63*(-0.12)+0*(-1.42)+63*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid3102);
         tempProbability*=signoid(signoidReady1,signoid3102);
         break;
         case "이인권/컴퓨터그래픽스":     var signoid4105 = 120*0.14 + 113*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.24*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 1*(-1.2)+90*(-0.12)+0*(-1.42)+90*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4105);
         tempProbability*=signoid(signoidReady1,signoid4105);
         break;
         case "조성배/인공지능":          var signoid4108 = 100*0.14 + 75*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+90*(-0.12)+1*(-1.42)+90*1*(0.05)+6*1*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4108);
         tempProbability*=signoid(signoidReady1,signoid4108);
         break;
         case "소프트웨어종합설계":       var signoid4101 = 10*0.14 + 17*(-0.05) + 0*(-0.33)+0*(-1.57) +1*(-2.33)+ 3.81*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+0*(-0.12)+1*(-1.42)+0*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4101);
         tempProbability*=signoid(signoidReady1,signoid4101);
         break;
         case "송도경/정보보호":          var signoid4109 = 80*0.14 + 56*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.75*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+64*(-0.12)+0*(-1.42)+64*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4109);
         tempProbability*=signoid(signoidReady1,signoid4109);
         break;
-        case "김선주/컴퓨터비전":         var signoid4106 = 100*0.14 + 144*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.59*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+80*(-0.12)+0*(-1.42)+80*1*(0.05)+6*0*0.43;
-        tempProbability*=signoid(signoidReady1,signoid4106);
+        case "김선주/컴퓨터비전":         var signoid4116 = 100*0.14 + 144*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4.59*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+80*(-0.12)+0*(-1.42)+80*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4111);
+        tempProbability*=signoid(signoidReady1,signoid4116);
         break;
         case "조성배/데이타마이닝":        var signoid4117 = 50*0.14 + 29*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 2.12*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+35*(-0.12)+0*(-1.42)+35*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4117);
         tempProbability*=signoid(signoidReady1,signoid4117);
         break;
         case "이진호/멀티코어및GPU프로그래밍":       var signoid4119 = 80*0.14 + 91*(-0.05) + 0*(-0.33)+1*(-1.57) +5*(-2.33)+ 0*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+64*(-0.12)+0*(-1.42)+64*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4119);
         tempProbability*=signoid(signoidReady1,signoid4119);
 
         break;
         case "박노성/기계학습":          var signoid4120 = 90*0.14 + 89*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 3.14*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+72*(-0.12)+0*(-1.42)+72*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4120);
         tempProbability*=signoid(signoidReady1,signoid4120);
         break;
         case "여진영/빅데이터":          var signoid4121 = 60*0.14 + 80*(-0.05) + 0*(-0.33)+1*(-1.57) +0*(-2.33)+ 4*0.28 + Mileage*0.11 + 3 * (-0.15) + 1*(-13.8) + 0*(-1.2)+54*(-0.12)+0*(-1.42)+54*1*(0.05)+6*0*0.43;
+        presentCourseProb=signoid(signoidReady1,signoid4121);
         tempProbability*=signoid(signoidReady1,signoid4121);
         break;
         default : 
         break;
     }
     console.log(tempProbability);
+    var percentPre = 100*presentCourseProb;
     var percent = 100*tempProbability; 
+    document.getElementById("#calc-present-number").innerText =  percentPre.toFixed(2);
     document.getElementById("#calc-result-number").innerText =  percent.toFixed(2);  // 총확률표시 부분에 소숫점 둘째자리까지 확률을 표시합니다.
 };
 
